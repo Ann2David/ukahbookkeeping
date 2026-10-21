@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Business Finance Dashboard | Ukah Bookkeeping Services</title>
+<meta name="description" content="A smart Excel & Google Sheets dashboard system that helps small business owners track income, expenses, cash flow and profitability with total clarity.">
+
+<meta name="description" content="A smart Excel & Google Sheets dashboard that helps small business owners track income, expenses, cash flow, and profitability with total clarity.">
+<meta name="keywords" content="business finance dashboard, Excel dashboard template, Google Sheets dashboard, small business finance tracker">
+<link rel="canonical" href="https://www.ukahbookkeepingservices.ca/product.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Ukah Bookkeeping Services">
+<meta property="og:title" content="Smart Business Finance Dashboard | Ukah Bookkeeping Services">
+<meta property="og:description" content="Simple. Smart. Powerful. A dashboard system that helps you track performance and make confident financial decisions.">
+<meta property="og:url" content="https://www.ukahbookkeepingservices.ca/product.html">
+<meta property="og:image" content="https://www.ukahbookkeepingservices.ca/og-image.jpg">
+<meta property="og:locale" content="en_CA">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Smart Business Finance Dashboard | Ukah Bookkeeping Services">
+<meta name="twitter:description" content="Simple. Smart. Powerful. Track income, expenses, and cash flow with clarity.">
+<meta name="twitter:image" content="https://www.ukahbookkeepingservices.ca/og-image.jpg">
+
+<link rel="icon" type="image/png" href="UUlogo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #12294B;
+  --navy-deep: #0B1E36;
+  --teal: #2FA79E;
+  --teal-dark: #23837C;
+  --teal-tint: #E7F4F2;
+  --amber: #C99A3E;
+  --paper: #FFFFFF;
+  --paper-alt: #FBFAF7;
+  --ink: #1C2B3A;
+  --ink-soft: #55677A;
+  --line: #DCD6C8;
+  --white: #FFFFFF;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --container: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --section-pad: clamp(56px, 9vw, 112px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; color: var(--navy); line-height: 1.15; }
+p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.container { max-width: var(--container); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); width: 100%; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-dark); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.eyebrow--light { color: #9FD9D2; }
+.section__head { max-width: 680px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section__head--center { max-width: 640px; margin-left: auto; margin-right: auto; text-align: center; }
+.section__title { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 600; }
+.section__lede { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; max-width: 56ch; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: 1px solid transparent; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--teal); color: var(--white); }
+.btn--primary:hover { background: var(--teal-dark); }
+.btn--dark { background: var(--navy); color: var(--white); }
+.btn--dark:hover { background: var(--navy-deep); }
+.btn--block { width: 100%; justify-content: center; }
+
+.site-top { position: sticky; top: 0; z-index: 100; width: 100%; }
+.topbar { background: var(--navy-deep); color: #C9D6E0; font-size: 0.85rem; }
+.topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 0; }
+.topbar__tagline { font-family: var(--font-mono); letter-spacing: 0.03em; color: #9FD9D2; }
+.topbar__tagline:hover { color: var(--white); }
+.topbar__contacts { display: flex; gap: 24px; }
+.topbar__item { display: inline-flex; align-items: center; gap: 6px; opacity: 0.9; }
+.topbar__item:hover { opacity: 1; color: var(--white); }
+@media (max-width: 720px) { .topbar__contacts { display: none; } }
+@media (max-width: 480px) {
+  .topbar__inner { padding: 8px 0; }
+  .topbar__tagline { font-size: 0.78rem; white-space: normal; line-height: 1.3; }
+}
+
+.header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; overflow: visible; }
+.brand { display: flex; align-items: center; gap: 12px; height: 100%; position: relative; min-width: 0; }
+.brand__logo { height: 128px; width: auto; max-width: 42vw; object-fit: contain; mix-blend-mode: multiply; position: relative; z-index: 1; margin-block: -28px; }
+.nav__list { display: flex; gap: 18px; align-items: center; height: 100%; }
+.nav__item { display: flex; align-items: center; height: 100%; position: relative; }
+.nav__link { font-weight: 500; font-size: 0.95rem; color: var(--ink); position: relative; padding: 6px 0; display: inline-flex; align-items: center; }
+.nav__link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+.nav__link:hover::after, .nav__link.is-active::after { transform: scaleX(1); }
+.nav__link.is-active { color: var(--navy); font-weight: 600; }
+.nav__link-row { display: flex; align-items: center; gap: 4px; height: 100%; }
+
+
+/* CSS Fix: Integrating hover states and the invisible bridge */
+.nav__item {
+  position: relative;
+}
+
+.nav__link-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__caret-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft, #475569);
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Activate caret animation on hover OR open */
+.nav__item:hover .nav__caret-btn,
+.nav__item.is-open .nav__caret-btn {
+  transform: rotate(180deg);
+  color: var(--teal, #0d9488);
+}
+
+.nav__dropdown {
+  position: absolute;
+  top: calc(100% + 12px); /* Leaves a gap below the navbar */
+  left: 0;
+  min-width: 240px;
+  background: var(--white, #ffffff);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+}
+
+/* Invisible bridge so the mouse doesn't leave the hover area when moving to the dropdown */
+.nav__dropdown::before {
+  content: '';
+  position: absolute;
+  top: -15px; /* Must cover the gap defined by `top: calc(100% + 12px)` */
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: transparent;
+}
+
+/* Show dropdown on hover OR when is-open class is active */
+.nav__item:hover .nav__dropdown,
+.nav__item.is-open .nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav__dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav__dropdown-link {
+  display: block;
+  padding: 10px 14px;
+  color: var(--navy, #0f172a);
+  font-size: 0.94rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.nav__dropdown-link:hover {
+  background: var(--teal-tint, #f0fdfa);
+  color: var(--teal-dark, #0d9488);
+}
+
+
+
+.nav__caret { display: inline-block; transition: transform 0.2s ease; font-size: 0.7rem; }
+.nav__item--has-dropdown:hover .nav__caret,
+.nav__item--has-dropdown:focus-within .nav__caret,
+.nav__item--has-dropdown.is-open .nav__caret { transform: rotate(180deg); }
+.nav__dropdown { position: absolute; top: calc(100% + 14px); left: 0; min-width: 260px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 20px 40px -20px rgba(18,41,75,0.35); padding: 10px; display: none; z-index: 90; }
+.nav__item--has-dropdown:hover .nav__dropdown,
+.nav__item--has-dropdown:focus-within .nav__dropdown,
+.nav__item--has-dropdown.is-open .nav__dropdown { display: block; }
+.nav__dropdown li + li { margin-top: 2px; }
+.nav__dropdown a { display: block; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--ink); transition: background 0.2s ease, color 0.2s ease; }
+.nav__dropdown a:hover, .nav__dropdown a.is-active { background: var(--teal-tint); color: var(--teal-dark); }
+.header__actions { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+.header__phone { display: flex; flex-direction: column; line-height: 1.2; text-align: right; }
+.header__phone-label { font-size: 0.72rem; color: var(--ink-soft); }
+.header__phone-number { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+
+/* Contact button: visible in header on desktop/tablet, hidden and replaced
+   by an in-menu button once the layout collapses to the hamburger nav. */
+.header__contact-btn { display: inline-flex; }
+.nav__contact-item { display: none; }
+
+.nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; flex-shrink: 0; }
+.nav__toggle span { width: 24px; height: 2px; background: var(--navy); display: block; transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 900px) {
+  .header__phone { display: none; }
+  .header__contact-btn { display: none; }
+  .nav__contact-item { display: block; margin-top: 14px; }
+  .nav__contact-item .btn { display: flex; width: 100%; }
+  .nav__toggle { display: flex; }
+  .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .nav.is-open { max-height: 80vh; overflow-y: auto; }
+  .nav__list { flex-direction: column; gap: 0; align-items: stretch; height: auto; padding: 10px var(--gutter) 24px; }
+  .nav__item { flex-direction: column; align-items: stretch; height: auto; }
+  .nav__link-row { justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .nav__link { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nav__link-row .nav__link { border-bottom: none; }
+  .nav__dropdown { position: static; box-shadow: none; border: none; padding: 0 0 8px 14px; min-width: 0; opacity: 1; visibility: visible; transform: none; display: none; }
+  .nav__item.is-open .nav__dropdown { display: block; }
+  .brand__logo { height: 88px; margin-block: -14px; }
+  .header__inner { height: 60px; }
+}
+@media (max-width: 480px) {
+  .brand__logo { height: 68px; margin-block: -6px; max-width: 55vw; }
+  .header__inner { height: 52px; }
+  .header__actions { gap: 10px; }
+  .nav__toggle { padding: 4px; }
+}
+
+.section { padding: var(--section-pad) 0; }
+.section--tint { background: var(--paper-alt); }
+
+/* ---------- Product hero ---------- */
+.product-hero { padding: clamp(48px, 8vw, 84px) 0 clamp(40px, 6vw, 64px); }
+.product-hero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 64px); align-items: center; }
+.product-hero__title { font-size: clamp(2rem, 4.6vw, 3.1rem); font-weight: 700; letter-spacing: -0.01em; }
+.product-hero__title-accent { color: var(--teal); }
+.product-hero__tagline { margin-top: 20px; font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 1.3rem; color: var(--teal-dark); }
+.product-hero__text { margin-top: 14px; color: var(--ink-soft); font-size: 1.03rem; max-width: 46ch; }
+.product-hero__badges { display: flex; flex-wrap: wrap; gap: 14px 26px; margin-top: 30px; }
+.badge { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 600; color: var(--navy); }
+.badge__icon { width: 34px; height: 34px; border-radius: 8px; background: var(--teal-tint); color: var(--teal-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.badge__icon svg { width: 18px; height: 18px; }
+.badge__icon--excel, .badge__icon--sheets { background: transparent; }
+.badge__icon--excel svg, .badge__icon--sheets svg { width: 30px; height: 30px; }
+.product-hero__media { position: relative; }
+.product-hero__media img { border-radius: var(--radius-md); border: 1px solid var(--line); box-shadow: 0 30px 60px -30px rgba(18,41,75,0.35); }
+@media (max-width: 900px) {
+  .product-hero__grid { grid-template-columns: 1fr; }
+  .product-hero__media { order: -1; max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .product-hero__tagline { font-size: 1.1rem; }
+  .product-hero__badges { gap: 12px 18px; margin-top: 24px; }
+  .badge { font-size: 0.84rem; }
+}
+
+/* ---------- Feature icon strip ---------- */
+.feature-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+.feature-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.feature-item__icon { width: 62px; height: 62px; border-radius: 50%; border: 1.5px solid var(--line); color: var(--teal-dark); display: flex; align-items: center; justify-content: center; transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease; }
+.feature-item__icon svg { width: 26px; height: 26px; }
+.feature-item:hover .feature-item__icon { border-color: var(--teal); background: var(--teal-tint); transform: translateY(-3px); }
+.feature-item__label { font-size: 0.88rem; font-weight: 600; color: var(--navy); max-width: 14ch; }
+@media (max-width: 900px) { .feature-grid { grid-template-columns: repeat(3, 1fr); row-gap: 32px; } }
+@media (max-width: 520px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px) {
+  .feature-item__icon { width: 54px; height: 54px; }
+  .feature-item__icon svg { width: 22px; height: 22px; }
+}
+
+/* ---------- Pricing ---------- */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: start; }
+.price-card { position: relative; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.price-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px rgba(18,41,75,0.35); }
+.price-card--featured { border-color: var(--navy); box-shadow: 0 20px 44px -22px rgba(18,41,75,0.4); }
+.price-card__head { padding: 22px 26px; color: var(--white); }
+.price-card--essential .price-card__head { background: var(--teal-dark); }
+.price-card--premium .price-card__head { background: var(--navy); }
+.price-card--ultimate .price-card__head { background: var(--teal-dark); }
+.price-card__head-title { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.price-card__ribbon { position: absolute; top: 18px; right: -34px; transform: rotate(45deg); background: var(--amber); color: var(--white); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 5px 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 3; }
+.price-card__body { padding: 26px; flex: 1; display: flex; flex-direction: column; }
+.price-card__desc { color: var(--ink-soft); font-size: 0.94rem; min-height: 44px; }
+.price-card__amount { margin-top: 18px; display: flex; align-items: baseline; gap: 6px; }
+.price-card__amount-value { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; color: var(--navy); }
+.price-card__amount-note { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+.price-card__plus { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-dark); font-weight: 700; margin: 22px 0 12px; }
+.price-card__list { display: flex; flex-direction: column; gap: 11px; margin-bottom: 24px; }
+.price-card__list li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.92rem; color: var(--ink); }
+.price-card__mark { width: 19px; height: 19px; flex-shrink: 0; margin-top: 1px; display: inline-flex; align-items: center; justify-content: center; background: var(--teal); color: var(--white); border-radius: 50%; font-size: 0.62rem; }
+.price-card__footer { margin-top: auto; padding-top: 8px; display: flex; justify-content: center; }
+.price-card__footer-icon { width: 52px; height: 52px; border-radius: 50%; background: var(--teal-tint); color: var(--teal-dark); display: flex; align-items: center; justify-content: center; }
+.price-card__footer-icon svg { width: 24px; height: 24px; }
+@media (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } .price-card--featured { transform: none; } }
+@media (max-width: 480px) {
+  .price-card__head { padding: 18px 20px; }
+  .price-card__body { padding: 22px 20px; }
+  .price-card__amount-value { font-size: 2.2rem; }
+}
+
+/* ---------- Connect / booking band ---------- */
+.connect-band { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line); }
+.connect-cta { background: var(--navy-deep); color: var(--white); padding: clamp(36px, 6vw, 52px); display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; text-align: left; }
+.connect-cta__icon { width: 54px; height: 54px; border-radius: 50%; background: var(--teal); color: var(--white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.connect-cta__icon svg { width: 26px; height: 26px; }
+.connect-cta__title { font-size: 1.4rem; font-weight: 600; max-width: 22ch; }
+.connect-cta__btn { flex-shrink: 0; }
+@media (max-width: 640px) { .connect-cta { text-align: center; justify-content: center; flex-direction: column; } }
+@media (max-width: 480px) {
+  .connect-cta__title { font-size: 1.2rem; }
+  .connect-cta__btn { width: 100%; text-align: center; }
+}
+
+/* ---------- Closing tagline strip ---------- */
+.tagline-strip { background: var(--teal); color: var(--white); padding: 18px 0; text-align: center; }
+.tagline-strip__inner { display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+@media (max-width: 480px) {
+  .tagline-strip__inner { font-size: 0.7rem; letter-spacing: 0.06em; text-align: center; }
+}
+
+
+.footer {
+  background: var(--navy-deep, #090d16);
+  color: #B9C7D3;
+  padding-top: 64px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1.3fr 1.1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background: var(--paper, #ffffff);
+  border-radius: var(--radius-sm, 6px);
+  padding: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.footer__blurb {
+  font-size: 0.92rem;
+  max-width: 30ch;
+  color: #9AABBA;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Social Media Icons Styling */
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B9C7D3;
+  transition: all 0.25s ease;
+}
+
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__social-link:hover {
+  background: var(--teal, #0d9488);
+  border-color: var(--teal, #0d9488);
+  color: var(--white, #ffffff);
+  transform: translateY(-2px);
+}
+
+.footer__heading {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white, #ffffff);
+  margin-bottom: 18px;
+}
+
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__nav a {
+  color: #B9C7D3;
+  transition: color 0.2s ease;
+}
+
+.footer__nav a:hover {
+  color: var(--white, #ffffff);
+}
+
+.footer__contact p {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.92rem;
+}
+
+.footer__label {
+  font-size: 0.72rem;
+  color: #7C8DA0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer__contact a {
+  color: #B9C7D3;
+  transition: color 0.2s ease;
+}
+
+.footer__contact a:hover {
+  color: var(--teal, #0d9488);
+}
+
+.footer__bottom {
+  padding: 22px 0;
+  font-size: 0.82rem;
+  color: #7C8DA0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.footer__credit {
+  color: #7C8DA0;
+}
+
+@media (max-width: 960px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer { padding-top: 48px; }
+  .footer__bottom { justify-content: flex-start; flex-direction: column; align-items: flex-start; }
+}
+
+
+
+.whatsapp-btn { position: fixed; bottom: 24px; right: 24px; width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 24px -8px rgba(0,0,0,0.4); z-index: 60; transition: transform 0.2s ease; }
+.whatsapp-btn:hover { transform: scale(1.08); }
+.whatsapp-btn__icon { width: 30px; height: 30px; }
+@media (max-width: 480px) {
+  .whatsapp-btn { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .whatsapp-btn__icon { width: 26px; height: 26px; }
+}
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal--visible { opacity: 1; transform: translateY(0); }
+
+/* Global small-screen guardrails */
+@media (max-width: 400px) {
+  :root { --gutter: 16px; }
+  .btn { padding: 12px 20px; font-size: 0.9rem; }
+}
+</style>
+
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343513690.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+
+</head>
+<body>
+
+<div class="site-top">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#top" class="topbar__tagline">Clean Books. On-Time Taxes. Zero Hassle</a>
+      <div class="topbar__contacts">
+        <a href="mailto:info@ukahbookkeepingservices.ca" class="topbar__item">
+          <span aria-hidden="true">&#9993;</span> info@ukahbookkeepingservices.ca
+        </a>
+        <a href="tel:+12269799080" class="topbar__item">
+          <span aria-hidden="true">&#9742;</span> +1 (226) 979-9080
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="brand__logo">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+
+          <li class="nav__item nav__item--has-dropdown" id="servicesNavItem">
+            <div class="nav__link-row">
+              <a href="" class="nav__link">Services</a>
+              <button type="button" class="nav__caret-btn" id="servicesCaret" data-dropdown-caret aria-expanded="false" aria-controls="servicesDropdown" aria-label="Toggle services submenu">
+                <span class="nav__caret" aria-hidden="true">&#9662;</span>
+              </button>
+            </div>
+            <ul class="nav__dropdown" id="servicesDropdown">
+              <li><a href="servic1.html">Core Bookkeeping</a></li>
+              <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+              <li><a href="service3.html">HST / GST Compliance</a></li>
+              <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="product.html" class="nav__link is-active">Product</a> </li>
+          <li class="nav__item"><a href="nigeria.html" class="nav__link">Nigeria</a></li>
+          <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+          <li class="nav__item"><a href="team.html" class="nav__link">Our Team</a></li>
+           <li class="nav__item"><a href="career.html" class="nav__link">Careers</a></li>
+            <li class="nav__item"><a href="refer.html" class="nav__link">Referral</a></li>
+          <li class="nav__item"><a href="FAQ.html" class="nav__link">FAQ</a></li>
+
+          <li class="nav__item nav__contact-item">
+            <a href="contact.html" class="btn btn--primary">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+       
+        <a href="contact.html" class="btn btn--primary header__contact-btn">Contact</a>
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<section class="product-hero">
+  <div class="container product-hero__grid">
+    <div class="product-hero__copy">
+      <p class="eyebrow">Smart Excel &amp; Google Sheets</p>
+      <h1 class="product-hero__title">Business Finance <span class="product-hero__title-accent">Dashboard</span></h1>
+      <p class="product-hero__tagline">Simple. Smart. Powerful.</p>
+      <p class="product-hero__text">A smart dashboard system that helps small business owners understand their numbers, track performance, and make confident financial decisions.</p>
+
+      <div class="product-hero__badges">
+        <div class="badge">
+          <span class="badge__icon badge__icon--excel" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="3" fill="#185C37"/><path d="M14 6h6.2c.4 0 .8.4.8.8v10.4c0 .4-.4.8-.8.8H14V6Z" fill="#107C42"/><path d="M14 6h4v3.2h-4V6Zm4 4.6h-4v3.2h4v-3.2Zm0 4.6h-4V18h4v-2.8Z" fill="#3FA071"/><rect x="2.3" y="4.3" width="12" height="15.4" rx="1.2" fill="#FFFFFF"/><path d="m5.3 8 2 3.8L5.2 16h1.9l1.3-2.8L9.7 16h2l-2.2-4.2L11.5 8H9.7l-1.2 2.6L7.2 8H5.3Z" fill="#185C37"/></svg>
+          </span>
+          Works with Excel
+        </div>
+        <div class="badge">
+          <span class="badge__icon badge__icon--sheets" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 1.5h9L19 6.5v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-19a1 1 0 0 1 1-1Z" fill="#0F9D58"/><path d="M14 1.5 19 6.5h-4a1 1 0 0 1-1-1v-4Z" fill="#87CEAC"/><rect x="6" y="10.5" width="11" height="8" rx="0.6" fill="#FFFFFF"/><path d="M6 13h11M6 15.5h11M10.2 10.5v8" stroke="#0F9D58" stroke-width="0.9"/></svg>
+          </span>
+          Works with Google Sheets
+        </div>
+        <div class="badge">
+          <span class="badge__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+          </span>
+          No accounting experience needed
+        </div>
+      </div>
+    </div>
+
+    <div class="product-hero__media">
+      <img src="dashboard.jpg" alt="Preview of the Business Finance Dashboard on a laptop screen">
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <p class="eyebrow">What's Inside</p>
+      <h2 class="section__title">Everything you need to run your business with clarity.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <span class="feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Z"/><path d="M12 7v6"/><path d="M9.5 10h5"/></svg>
+        </span>
+        <span class="feature-item__label">Track Income &amp; Expenses</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v9"/><path d="M9 10v9"/><path d="M15 10v9"/><path d="M19 10v9"/><path d="M3 19h18"/></svg>
+        </span>
+        <span class="feature-item__label">Import Bank Transactions</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 3 5-7"/></svg>
+        </span>
+        <span class="feature-item__label">Monitor Cash Flow &amp; Profitability</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
+        </span>
+        <span class="feature-item__label">Interactive Dashboard &amp; Reports</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg>
+        </span>
+        <span class="feature-item__label">Make Better Decisions</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </span>
+        <span class="feature-item__label">Save Time &amp; Reduce Stress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section__head section__head--center">
+      <p class="eyebrow">Pricing</p>
+      <h2 class="section__title">Choose the plan that fits your business.</h2>
+      <p class="section__lede" style="margin-left:auto; margin-right:auto;">One-time payment. No subscriptions, no hidden fees.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <article class="price-card price-card--essential">
+        <div class="price-card__head">
+          <span class="price-card__head-title">Essential</span>
+        </div>
+        <div class="price-card__body">
+          <p class="price-card__desc">The basics you need to get started.</p>
+          <div class="price-card__amount">
+            <span class="price-card__amount-value">$15</span>
+          </div>
+          <span class="price-card__amount-note">One-Time Payment</span>
+
+          <ul class="price-card__list" style="margin-top:22px;">
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Income Tracker</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Expense Tracker</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Monthly Summary</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Category Breakdown</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Easy-to-use Google Sheets template</li>
+          </ul>
+
+          <div class="price-card__footer">
+            <span class="price-card__footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v4h6V3"/><path d="M9 12h6"/><path d="M9 16h4"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="price-card price-card--premium price-card--featured">
+        <span class="price-card__ribbon">Most Popular</span>
+        <div class="price-card__head">
+          <span class="price-card__head-title">Premium</span>
+        </div>
+        <div class="price-card__body">
+          <p class="price-card__desc">All-in-one dashboard for complete financial visibility.</p>
+          <div class="price-card__amount">
+            <span class="price-card__amount-value">$50</span>
+          </div>
+          <span class="price-card__amount-note">One-Time Payment</span>
+
+          <p class="price-card__plus">Everything in Essential, plus:</p>
+          <ul class="price-card__list">
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Interactive Dashboard</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Cash Flow Dashboard</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Profit Tracker</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Budget Tracker</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Financial KPIs</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Charts &amp; Visual Reports</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Bank Statement Import (CSV/Excel)</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Setup Guide</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Video Walkthrough</li>
+          </ul>
+
+          <div class="price-card__footer">
+            <span class="price-card__footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/><path d="M7 14l3-4 3 2 4-5"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="price-card price-card--ultimate">
+        <div class="price-card__head">
+          <span class="price-card__head-title">Ultimate</span>
+        </div>
+        <div class="price-card__body">
+          <p class="price-card__desc">Personalized support to help you grow with confidence.</p>
+          <div class="price-card__amount">
+            <span class="price-card__amount-value">$100</span>
+          </div>
+          <span class="price-card__amount-note">One-Time Payment</span>
+
+          <p class="price-card__plus">Everything in Premium, plus:</p>
+          <ul class="price-card__list">
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Personalized Setup</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Dashboard Customization</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> One-on-One Onboarding Call</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> 30-Day Support</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Business Finance Review</li>
+            <li><span class="price-card__mark" aria-hidden="true">&#10003;</span> Priority Support</li>
+          </ul>
+
+          <div class="price-card__footer">
+            <span class="price-card__footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l3 5-9 13L3 8Z"/><path d="M3 8h18"/><path d="M9 3l3 5 3-5"/><path d="M12 8v13"/></svg>
+            </span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <div class="connect-band">
+      <div class="connect-cta">
+        <span class="connect-cta__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 11h18"/></svg>
+        </span>
+        <div>
+          <p class="connect-cta__title">Ready to take control of your business finances?</p>
+        </div>
+        <a href="https://calendly.com/chidinma-ukah/30min" class="btn btn--primary connect-cta__btn">Book a Free 30-Minute Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="tagline-strip">
+  <div class="container tagline-strip__inner">
+    <span aria-hidden="true">&#9825;</span> Built for small business owners. Designed for financial clarity. <span aria-hidden="true">&#9825;</span>
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="footer__logo">
+      <p class="footer__blurb">Accurate bookkeeping, practical reporting, and dependable financial systems for small businesses.</p>
+      
+      <!-- Social Media Icons -->
+      <div class="footer__socials" aria-label="Social Media">
+        <a href="https://www.instagram.com/ukahbookkeepingservices?igsh=ZmZ6cDl1ZmZma2xi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/ukah-bookkeeping-services/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <nav class="footer__nav" aria-label="Footer">
+      <h3 class="footer__heading">Main Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="product.html">Product</a></li>
+         <li><a href="nigeria.html">Nigeria</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="team.html">Our Team</a></li>
+         <li><a href="career.html">Careers</a></li>
+         <li><a href="refer.html">Referral</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__nav" aria-label="Services">
+      <h3 class="footer__heading">Our Services</h3>
+      <ul>
+        <li><a href="servic1.html">Core Bookkeeping</a></li>
+        <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+        <li><a href="service3.html">HST / GST Compliance</a></li>
+        <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__contact">
+      <h3 class="footer__heading">Contact</h3>
+      <p><span class="footer__label">Email</span><a href="mailto:info@ukahbookkeepingservices.ca">info@ukahbookkeepingservices.ca</a></p>
+      <p><span class="footer__label">Phone</span><a href="tel:+12269799080">+1 (226) 979-9080</a></p>
+      <p><span class="footer__label">Address</span><span>Kitchener, Ontario, Canada</span></p>
+      <p><span class="footer__label">Hours</span><span>Mon&ndash;Thu, 8:00 AM&ndash;6:00 PM EST, Fri 8:00 AM&ndash;6:30 PM EST, Sat 9:00 AM&ndash;5:00 PM EST</span></p>
+    </div>
+  </div>
+  
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Ukah Bookkeeping Services. All Rights Reserved.</p>
+    <p class="footer__credit">Built By SOGROVA</p>
+  </div>
+</footer>
+
+
+<a id="whatsappButton" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-btn__icon">
+    <path fill="currentColor" d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.65 27 28 21.62 28 15S22.65 3 16.02 3Zm0 21.7c-1.98 0-3.85-.55-5.44-1.5l-.39-.23-4.62 1.08 1.1-4.5-.25-.4A9.62 9.62 0 0 1 6.3 15c0-5.35 4.36-9.7 9.72-9.7 5.35 0 9.7 4.35 9.7 9.7 0 5.36-4.35 9.7-9.7 9.7Zm5.32-7.26c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.14-.2.3-.75.95-.92 1.14-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.3-1.02 1-1.02 2.43 0 1.43 1.05 2.82 1.2 3.01.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/>
+  </svg>
+</a>
+
+<script>
+  window.SITE_CONFIG = {
+    whatsapp: {
+      number: "12269799080",
+      message: "Hello, I visited your website and I would like to make an enquiry."
+    }
+  };
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var waBtn = document.getElementById("whatsappButton");
+  if (waBtn && window.SITE_CONFIG) {
+    var cfg = window.SITE_CONFIG.whatsapp;
+    var url = "https://wa.me/" + cfg.number + "?text=" + encodeURIComponent(cfg.message);
+    waBtn.setAttribute("href", url);
+  }
+
+  var navToggle = document.getElementById("navToggle");
+  var siteNav = document.getElementById("site-nav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = siteNav.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    siteNav.querySelectorAll(".nav__dropdown a, .nav__list > .nav__item > .nav__link-row > .nav__link, .nav__list > .nav__item > .nav__link").forEach(function (link) {
+      link.addEventListener("click", function () {
+        siteNav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* JavaScript Fix: Handling both click and hover states */
+document.addEventListener("DOMContentLoaded", function () {
+  var servicesItem = document.getElementById("servicesNavItem");
+  var servicesCaret = document.getElementById("servicesCaret");
+  var servicesDropdown = document.getElementById("servicesDropdown");
+
+  if (servicesItem && servicesCaret && servicesDropdown) {
+    
+    // Helper function to open menu
+    function openMenu() {
+      servicesItem.classList.add("is-open");
+      servicesCaret.setAttribute("aria-expanded", "true");
+    }
+
+    // Helper function to close menu
+    function closeMenu() {
+      servicesItem.classList.remove("is-open");
+      servicesCaret.setAttribute("aria-expanded", "false");
+    }
+
+    // 1. Click support (for mobile and deliberate clicks)
+    servicesCaret.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (servicesItem.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // 2. Hover support (for desktop)
+    servicesItem.addEventListener("mouseenter", openMenu);
+    servicesItem.addEventListener("mouseleave", closeMenu);
+
+    // 3. Stop clicks inside the dropdown from closing it
+    servicesDropdown.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+
+    // 4. Close dropdown when clicking elsewhere on the page
+    document.addEventListener("click", function (e) {
+      if (servicesItem.classList.contains("is-open") && !servicesItem.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  }
+});
+})();
+</script>
+</body>
+</html>

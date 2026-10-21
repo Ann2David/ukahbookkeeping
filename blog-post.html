@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article | Ukah Bookkeeping Services</title>
+  <link rel="icon" type="image/png" href="UUlogo.jpeg">
+  <style>
+    body { font-family: system-ui, sans-serif; line-height: 1.6; color: #333; background: #f8fafc; padding: 40px 20px; }
+    .post-container { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .post-hero-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin: 20px 0; }
+    .category { font-weight: bold; color: #2563eb; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; }
+    h1 { font-size: 2.2rem; margin: 10px 0 15px; color: #1e293b; }
+    time { color: #64748b; font-size: 0.9rem; display: block; margin-bottom: 25px; }
+    .post-body { margin-top: 30px; font-size: 1.1rem; }
+    .back-link { display: inline-block; margin-top: 40px; color: #2563eb; text-decoration: none; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343513690.js"></script>
+<!-- End of HubSpot Embed Code -->
+</head>
+<body>
+
+  <main class="post-container" id="postContentArea">
+    <p>Loading article...</p>
+  </main>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    var SUPABASE_URL = "https://ecmjucyvqhxvimuaovxk.supabase.co";
+    var SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk";
+    var supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    var container = document.getElementById("postContentArea");
+    var urlParams = new URLSearchParams(window.location.search);
+    var slug = urlParams.get("slug");
+
+    function escapeHtml(value) {
+      var div = document.createElement("div");
+      div.textContent = value == null ? "" : String(value);
+      return div.innerHTML;
+    }
+
+    function formatPublishDate(isoDate) {
+      if (!isoDate) return "";
+      var date = new Date(isoDate);
+      if (isNaN(date.getTime())) return "";
+      return date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    }
+
+    async function loadSinglePost() {
+      if (!slug) {
+        container.innerHTML = '<h2>Article not found</h2><p>No article slug was provided in the URL link.</p><a href="resources.html" class="back-link">&larr; Back to Resources</a>';
+        return;
+      }
+
+      var response = await supabaseClient
+        .from("posts")
+        .select("*")
+        .eq("slug", slug)
+        .eq("is_published", true)
+        .single();
+
+      if (response.error || !response.data) {
+        container.innerHTML = '<h2>Article not found</h2><p>This article may have been removed or is unpublished.</p><a href="resources.html" class="back-link">&larr; Back to Resources</a>';
+        return;
+      }
+
+      var post = response.data;
+      var imageHtml = post.image_url ? '<img src="' + escapeHtml(post.image_url) + '" alt="" class="post-hero-img">' : "";
+
+      container.innerHTML = 
+        '<span class="category">' + escapeHtml(post.category || "Bookkeeping") + '</span>' +
+        '<h1>' + escapeHtml(post.title) + '</h1>' +
+        '<time>' + escapeHtml(formatPublishDate(post.published_at)) + '</time>' +
+        imageHtml +
+        '<div class="post-body">' + (post.content || "") + '</div>' +
+        '<a href="resources.html" class="back-link">&larr; Back to Resources</a>';
+    }
+
+    document.addEventListener("DOMContentLoaded", loadSinglePost);
+  </script>
+</body>
+</html>

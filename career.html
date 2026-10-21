@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | Ukah Bookkeeping Services</title>
+<meta name="description" content="Join the Ukah Bookkeeping Services team. See current openings or submit your CV to our talent pool for future opportunities.">
+
+<link rel="icon" type="image/png" href="UUlogo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #12294B;
+  --navy-deep: #0B1E36;
+  --teal: #2FA79E;
+  --teal-dark: #23837C;
+  --teal-tint: #E7F4F2;
+  --amber: #C99A3E;
+  --paper: #FFFFFF;
+  --paper-alt: #FFFFFF;
+  --ink: #1C2B3A;
+  --ink-soft: #55677A;
+  --line: #DCD6C8;
+  --white: #FFFFFF;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --container: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --section-pad: clamp(56px, 9vw, 112px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+html, body { max-width: 100%; overflow-x: hidden; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; color: var(--navy); line-height: 1.15; }
+p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.container { max-width: var(--container); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-dark); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.section__lede { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; max-width: 56ch; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: 1px solid transparent; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--teal); color: var(--white); }
+.btn--primary:hover { background: var(--teal-dark); }
+.btn--outline { background: transparent; color: var(--navy); border-color: var(--line); }
+.btn--outline:hover { border-color: var(--teal); color: var(--teal-dark); }
+
+.site-top { position: sticky; top: 0; z-index: 100; width: 100%; }
+
+.topbar { background: var(--navy-deep); color: #C9D6E0; font-size: 0.85rem; }
+.topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 0; }
+.topbar__tagline { font-family: var(--font-mono); letter-spacing: 0.03em; color: #9FD9D2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topbar__tagline:hover { color: var(--white); }
+.topbar__contacts { display: flex; gap: 24px; flex-shrink: 0; }
+.topbar__item { display: inline-flex; align-items: center; gap: 6px; opacity: 0.9; }
+.topbar__item:hover { opacity: 1; color: var(--white); }
+@media (max-width: 720px) { .topbar__contacts { display: none; } }
+@media (max-width: 360px) { .topbar { font-size: 0.72rem; } }
+
+.header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; overflow: visible; flex-wrap: nowrap; }
+.brand { display: flex; align-items: center; gap: 12px; height: 100%; position: relative; min-width: 0; flex-shrink: 1; }
+.brand__logo { height: 128px; width: auto; max-width: 100%; object-fit: contain; mix-blend-mode: multiply; position: relative; z-index: 1; margin-block: -28px; }
+.nav__list { display: flex; gap: 18px; align-items: center; height: 100%; }
+.nav__item { display: flex; align-items: center; height: 100%; position: relative; }
+.nav__link { font-weight: 500; font-size: 0.95rem; color: var(--ink); position: relative; padding: 6px 0; display: inline-flex; align-items: center; }
+.nav__link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+.nav__link:hover::after, .nav__link.is-active::after { transform: scaleX(1); }
+.nav__link.is-active { color: var(--navy); font-weight: 600; }
+.nav__link-row { display: flex; align-items: center; gap: 4px; height: 100%; }
+.nav__caret-btn { background: none; border: none; padding: 6px; display: flex; align-items: center; justify-content: center; color: var(--ink-soft, #475569); cursor: pointer; transition: transform 0.25s ease, color 0.25s ease; }
+.nav__item:hover .nav__caret-btn, .nav__item.is-open .nav__caret-btn { transform: rotate(180deg); color: var(--teal, #0d9488); }
+.nav__dropdown { position: absolute; top: calc(100% + 12px); left: 0; min-width: 240px; background: var(--white, #ffffff); border: 1px solid var(--line, #e2e8f0); border-radius: var(--radius-md, 8px); box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1); padding: 10px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); z-index: 100; }
+.nav__dropdown::before { content: ''; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; background: transparent; }
+.nav__item:hover .nav__dropdown, .nav__item.is-open .nav__dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav__dropdown a { display: block; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--ink); transition: background 0.2s ease, color 0.2s ease; }
+.nav__dropdown a:hover { background: var(--teal-tint); color: var(--teal-dark); }
+.nav__caret { display: inline-block; transition: transform 0.2s ease; font-size: 0.7rem; }
+.nav__dropdown li + li { margin-top: 2px; }
+.header__actions { display: flex; align-items: center; gap: 22px; flex-shrink: 0; }
+.header__phone { display: flex; flex-direction: column; line-height: 1.2; text-align: right; }
+.header__phone-label { font-size: 0.72rem; color: var(--ink-soft); }
+.header__phone-number { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+.nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 10px 6px; flex-shrink: 0; }
+.nav__toggle span { width: 24px; height: 2px; background: var(--navy); display: block; transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav__item--contact { display: none; }
+.nav__contact-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px 26px; border-radius: 999px; background: var(--teal); color: var(--white); font-weight: 600; font-size: 0.95rem; transition: background 0.2s ease, transform 0.2s ease; }
+.nav__contact-btn:hover { background: var(--teal-dark); transform: translateY(-2px); }
+
+@media (max-width: 900px) {
+  .header__phone { display: none; }
+  .header__contact-btn { display: none; }
+  .nav__toggle { display: flex; }
+  .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .nav.is-open { max-height: 70vh; overflow-y: auto; }
+  .nav__list { flex-direction: column; gap: 0; align-items: stretch; height: auto; padding: 10px var(--gutter) 20px; }
+  .nav__item { flex-direction: column; align-items: stretch; height: auto; }
+  .nav__link-row { justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .nav__link { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav__link-row .nav__link { border-bottom: none; }
+  .nav__dropdown { position: static; box-shadow: none; border: none; padding: 0 0 8px 14px; min-width: 0; }
+  .brand__logo { height: 88px; margin-block: -14px; }
+  .header__inner { height: 60px; }
+  .header__actions { gap: 10px; }
+  .nav__item--contact { display: block; margin-top: 16px; }
+}
+@media (max-width: 420px) {
+  .brand__logo { height: 60px; margin-block: 0; }
+  .header__inner { height: 56px; gap: 8px; }
+  .nav__toggle { padding: 8px 2px; }
+}
+
+.section { padding: var(--section-pad) 0; }
+
+/* ---------- Careers hero ---------- */
+.hero { background: var(--navy); padding: clamp(64px, 10vw, 112px) 0 clamp(56px, 8vw, 96px); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 85% 20%, rgba(47,167,158,0.22), transparent 55%); pointer-events: none; }
+.hero__inner { position: relative; max-width: 720px; }
+.hero .eyebrow { color: #9FD9D2; }
+.hero__title { font-size: clamp(2.1rem, 4.8vw, 3.2rem); color: var(--white); font-weight: 600; }
+.hero__lede { margin-top: 20px; color: #C9D6E0; font-size: 1.12rem; max-width: 60ch; line-height: 1.7; }
+.hero__actions { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
+.hero .btn--outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.25); }
+.hero .btn--outline:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ---------- Why work with us ---------- */
+.why-header { max-width: 68ch; }
+.why-list { margin-top: clamp(28px, 4vw, 40px); display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 28px; }
+.why-list li { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 20px 22px; font-size: 0.98rem; line-height: 1.6; color: var(--ink); }
+.why-list li svg { flex-shrink: 0; margin-top: 2px; color: var(--teal-dark); }
+@media (max-width: 640px) { .why-list { grid-template-columns: 1fr; } }
+
+/* ---------- Job listings ---------- */
+.jobs-header { max-width: 68ch; }
+.jobs { display: flex; flex-direction: column; gap: 18px; margin-top: clamp(28px, 4vw, 40px); }
+.job-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: clamp(24px, 3vw, 32px); display: flex; flex-direction: column; gap: 14px; transition: box-shadow 0.25s ease, border-color 0.25s ease; }
+.job-card:hover { box-shadow: 0 20px 40px -24px rgba(18,41,75,0.25); border-color: #cfc7b3; }
+.job-card__title { font-size: 1.3rem; font-weight: 600; }
+.job-card__meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.job-card__meta span { font-family: var(--font-mono); background: var(--teal-tint); color: var(--teal-dark); padding: 6px 13px; border-radius: 999px; font-size: 0.78rem; }
+.job-card__desc { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.65; max-width: 68ch; }
+.job-card__foot { margin-top: 4px; }
+.jobs-empty { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: clamp(30px, 4vw, 44px); color: var(--ink-soft); font-size: 1rem; text-align: center; }
+.jobs-empty--error { border-color: #e3c3ba; background: #FBF3F0; color: #8A4433; }
+.jobs-skeleton { display: flex; flex-direction: column; gap: 18px; }
+.jobs-skeleton__row { height: 118px; border-radius: var(--radius-md); background: linear-gradient(90deg, var(--teal-tint) 25%, #f4faf9 37%, var(--teal-tint) 63%); background-size: 400% 100%; animation: shimmer 1.4s ease infinite; }
+@keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+@media (prefers-reduced-motion: reduce) { .jobs-skeleton__row { animation: none; } }
+
+/* ---------- Talent pool CTA ---------- */
+.cta { background: var(--navy); padding: clamp(48px, 8vw, 84px) 0; }
+.cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; }
+.cta__title { font-size: clamp(2rem, 4.6vw, 2.8rem); color: var(--white); font-weight: 600; max-width: 24ch; }
+.cta__text { margin-top: 14px; color: #DCE6EC; max-width: 48ch; }
+
+.footer { background: var(--navy-deep, #090d16); color: #B9C7D3; padding-top: 64px; }
+.footer__grid { display: grid; grid-template-columns: 1.3fr 0.9fr 1.3fr 1.1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.footer__logo { height: 64px; width: auto; object-fit: contain; background: var(--paper, #ffffff); border-radius: var(--radius-sm, 6px); padding: 8px 12px; margin-bottom: 16px; }
+.footer__blurb { font-size: 0.92rem; max-width: 30ch; color: #9AABBA; margin-bottom: 20px; line-height: 1.5; }
+.footer__socials { display: flex; align-items: center; gap: 12px; }
+.footer__social-link { width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: #B9C7D3; transition: all 0.25s ease; }
+.footer__social-link svg { width: 18px; height: 18px; }
+.footer__social-link:hover { background: var(--teal, #0d9488); border-color: var(--teal, #0d9488); color: var(--white, #ffffff); transform: translateY(-2px); }
+.footer__heading { font-family: var(--font-mono, monospace); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white, #ffffff); margin-bottom: 18px; }
+.footer__nav ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__nav a { color: #B9C7D3; transition: color 0.2s ease; }
+.footer__nav a:hover { color: var(--white, #ffffff); }
+.footer__contact p { margin-bottom: 12px; display: flex; flex-direction: column; gap: 2px; font-size: 0.92rem; }
+.footer__label { font-size: 0.72rem; color: #7C8DA0; text-transform: uppercase; letter-spacing: 0.06em; }
+.footer__contact a { color: #B9C7D3; transition: color 0.2s ease; }
+.footer__contact a:hover { color: var(--teal, #0d9488); }
+.footer__bottom { padding: 22px 0; font-size: 0.82rem; color: #7C8DA0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
+.footer__credit { color: #7C8DA0; }
+@media (max-width: 960px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .footer__grid { grid-template-columns: 1fr; } }
+
+.whatsapp-btn { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 24px -8px rgba(0,0,0,0.4); z-index: 60; transition: transform 0.2s ease; }
+.whatsapp-btn:hover { transform: scale(1.08); }
+.whatsapp-btn__icon { width: 28px; height: 28px; }
+@media (max-width: 480px) {
+  .whatsapp-btn { bottom: 14px; right: 14px; width: 50px; height: 50px; }
+  .whatsapp-btn__icon { width: 26px; height: 26px; }
+}
+
+@media (max-width: 720px) {
+  .hero { padding: 44px 0 40px; }
+  .hero__lede { font-size: 1rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { justify-content: center; text-align: center; }
+  .cta__inner { flex-direction: column; align-items: flex-start; }
+  .cta__inner .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .hero__title { font-size: 1.85rem; }
+  .job-card { padding: 20px; }
+  .job-card__title { font-size: 1.15rem; }
+  .cta__title { font-size: 1.7rem; }
+}
+@media (max-width: 360px) {
+  :root { --gutter: 16px; }
+  .hero__title { font-size: 1.6rem; }
+  .eyebrow { font-size: 0.7rem; }
+  .btn { padding: 12px 20px; font-size: 0.9rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="site-top">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#top" class="topbar__tagline">Clean Books. On-Time Taxes. Zero Hassle</a>
+      <div class="topbar__contacts">
+        <a href="mailto:info@ukahbookkeepingservices.ca" class="topbar__item">
+          <span aria-hidden="true">&#9993;</span> info@ukahbookkeepingservices.ca
+        </a>
+        <a href="tel:+12269799080" class="topbar__item">
+          <span aria-hidden="true">&#9742;</span> +1 (226) 979-9080
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="brand__logo">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+
+          <li class="nav__item nav__item--has-dropdown" id="servicesNavItem">
+            <div class="nav__link-row">
+              <a href="index.html#services" class="nav__link">Services</a>
+              <button type="button" class="nav__caret-btn" id="servicesCaret" aria-expanded="false" aria-controls="servicesDropdown" aria-label="Toggle services submenu">
+                <span class="nav__caret" aria-hidden="true">&#9662;</span>
+              </button>
+            </div>
+            <ul class="nav__dropdown" id="servicesDropdown">
+              <li><a href="servic1.html">Core Bookkeeping</a></li>
+              <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+              <li><a href="service3.html">HST / GST Compliance</a></li>
+              <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="Product.html" class="nav__link">Product</a></li>
+          <li class="nav__item"><a href="nigeria.html" class="nav__link">Nigeria</a></li>
+          <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+          <li class="nav__item"><a href="team.html" class="nav__link">Our Team</a></li>
+          <li class="nav__item"><a href="careers.html" class="nav__link is-active">Careers</a></li>
+           <li class="nav__item"><a href="refer.html" class="nav__link">Referral</a></li>
+          <li class="nav__item"><a href="faq.html" class="nav__link">FAQ</a></li>
+
+          <li class="nav__item nav__item--contact">
+            <a href="contact.html" class="nav__contact-btn">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+       
+        <a href="contact.html" class="btn btn--primary header__contact-btn">Contact</a>
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<section class="hero">
+  <div class="container hero__inner">
+    <span class="eyebrow">Careers</span>
+    <h1 class="hero__title">Build your career with us</h1>
+    <p class="hero__lede">Great businesses are built by great people. We're always looking for professional, dependable, detail-oriented people who are committed to quality  people who take pride in getting the numbers right.</p>
+    <div class="hero__actions">
+      <a href="#jobs" class="btn btn--primary">See Current Openings</a>
+      <a href="talent-pool.html" class="btn btn--outline">Join Our Talent Pool</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="container">
+    <span class="eyebrow">Why Ukah</span>
+    <h2 class="why-header">Why work with Ukah Bookkeeping Services?</h2>
+    <ul class="why-list">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Work with businesses across different industries</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Develop practical, hands-on professional experience</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Build your financial and business knowledge</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Work in a professional, collaborative environment</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Take on meaningful responsibilities from day one</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Grow your skills and career with real support</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="jobs">
+  <div class="container">
+    <span class="eyebrow">Current Opportunities</span>
+    <h2 class="jobs-header">Open roles at Ukah Bookkeeping Services</h2>
+    <p class="section__lede">Browse what's open right now. Each listing has the full details and a link to apply.</p>
+
+    <div id="jobsContainer" style="margin-top: clamp(28px, 4vw, 40px);">
+      <div class="jobs-skeleton" aria-hidden="true">
+        <div class="jobs-skeleton__row"></div>
+        <div class="jobs-skeleton__row"></div>
+        <div class="jobs-skeleton__row"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta__inner">
+    <div>
+      <h2 class="cta__title">Don't see a suitable vacancy?</h2>
+      <p class="cta__text">Submit your CV for future opportunities that may match your skills and experience. We'll reach out when a fitting role opens up.</p>
+    </div>
+    <a class="btn btn--primary" href="talent-pool.html">Submit Your CV</a>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="footer__logo">
+      <p class="footer__blurb">Accurate bookkeeping, practical reporting, and dependable financial systems for small businesses.</p>
+
+      <div class="footer__socials" aria-label="Social Media">
+        <a href="https://www.instagram.com/ukahbookkeepingservices?igsh=ZmZ6cDl1ZmZma2xi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/ukah-bookkeeping-services/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer">
+      <h3 class="footer__heading">Main Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="nigeria.html">Nigeria</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="refer.html">Referral</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__nav" aria-label="Services">
+      <h3 class="footer__heading">Our Services</h3>
+      <ul>
+        <li><a href="servic1.html">Core Bookkeeping</a></li>
+        <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+        <li><a href="service3.html">HST / GST Compliance</a></li>
+        <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__contact">
+      <h3 class="footer__heading">Contact</h3>
+      <p><span class="footer__label">Email</span><a href="mailto:info@ukahbookkeepingservices.ca">info@ukahbookkeepingservices.ca</a></p>
+      <p><span class="footer__label">Phone</span><a href="tel:+12269799080">+1 (226) 979-9080</a></p>
+      <p><span class="footer__label">Address</span><span>Kitchener, Ontario, Canada</span></p>
+      <p><span class="footer__label">Hours</span><span>Mon&ndash;Thu, 8:00 AM&ndash;6:00 PM EST, Fri 8:00 AM&ndash;6:30 PM EST, Sat 9:00 AM&ndash;5:00 PM EST</span></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Ukah Bookkeeping Services. All Rights Reserved.</p>
+    <p class="footer__credit">Built By SOGROVA</p>
+  </div>
+</footer>
+
+<a id="whatsappButton" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-btn__icon">
+    <path fill="currentColor" d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.65 27 28 21.62 28 15S22.65 3 16.02 3Zm0 21.7c-1.98 0-3.85-.55-5.44-1.5l-.39-.23-4.62 1.08 1.1-4.5-.25-.4A9.62 9.62 0 0 1 6.3 15c0-5.35 4.36-9.7 9.72-9.7 5.35 0 9.7 4.35 9.7 9.7 0 5.36-4.35 9.7-9.7 9.7Zm5.32-7.26c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.14-.2.3-.75.95-.92 1.14-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.3-1.02 1-1.02 2.43 0 1.43 1.05 2.82 1.2 3.01.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/>
+  </svg>
+</a>
+
+<script>
+  window.SITE_CONFIG = {
+    whatsapp: {
+      number: "2347039567158",
+      message: "Hello, I visited your website and I would like to make an enquiry."
+    }
+  };
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var waBtn = document.getElementById("whatsappButton");
+  if (waBtn && window.SITE_CONFIG) {
+    var cfg = window.SITE_CONFIG.whatsapp;
+    var url = "https://wa.me/" + cfg.number + "?text=" + encodeURIComponent(cfg.message);
+    waBtn.setAttribute("href", url);
+  }
+
+  var navToggle = document.getElementById("navToggle");
+  var siteNav = document.getElementById("site-nav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = siteNav.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    siteNav.querySelectorAll(".nav__dropdown a, .nav__list > .nav__item > .nav__link-row > .nav__link, .nav__list > .nav__item > .nav__link, .nav__contact-btn").forEach(function (link) {
+      link.addEventListener("click", function () {
+        siteNav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var servicesItem = document.getElementById("servicesNavItem");
+    var servicesCaret = document.getElementById("servicesCaret");
+    var servicesDropdown = document.getElementById("servicesDropdown");
+    if (servicesItem && servicesCaret && servicesDropdown) {
+      function openMenu() { servicesItem.classList.add("is-open"); servicesCaret.setAttribute("aria-expanded", "true"); }
+      function closeMenu() { servicesItem.classList.remove("is-open"); servicesCaret.setAttribute("aria-expanded", "false"); }
+      servicesCaret.addEventListener("click", function (e) {
+        e.preventDefault(); e.stopPropagation();
+        servicesItem.classList.contains("is-open") ? closeMenu() : openMenu();
+      });
+      servicesItem.addEventListener("mouseenter", openMenu);
+      servicesItem.addEventListener("mouseleave", closeMenu);
+      servicesDropdown.addEventListener("click", function (e) { e.stopPropagation(); });
+      document.addEventListener("click", function (e) {
+        if (servicesItem.classList.contains("is-open") && !servicesItem.contains(e.target)) closeMenu();
+      });
+    }
+  });
+})();
+</script>
+
+<!-- ===== Job listings, powered by Supabase ===== -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function () {
+  "use strict";
+
+  var SUPABASE_URL = "https://ecmjucyvqhxvimuaovxk.supabase.co";
+  var SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk";
+  var supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  function escapeHtml(v) {
+    var d = document.createElement("div");
+    d.textContent = v == null ? "" : v;
+    return d.innerHTML;
+  }
+
+  function formatDeadline(dateStr) {
+    if (!dateStr) return "";
+    var d = new Date(dateStr);
+    if (isNaN(d.getTime())) return "";
+    return "Apply by " + d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  function renderJobCard(job) {
+    var metaParts = [];
+    if (job.location) metaParts.push('<span>' + escapeHtml(job.location) + (job.country ? ", " + escapeHtml(job.country) : "") + '</span>');
+    else if (job.country) metaParts.push('<span>' + escapeHtml(job.country) + '</span>');
+    if (job.employment_type) metaParts.push('<span>' + escapeHtml(job.employment_type) + '</span>');
+    if (job.work_arrangement) metaParts.push('<span>' + escapeHtml(job.work_arrangement) + '</span>');
+    if (job.experience_level) metaParts.push('<span>' + escapeHtml(job.experience_level) + '</span>');
+
+    return '' +
+      '<article class="job-card">' +
+        '<h3 class="job-card__title">' + escapeHtml(job.title) + '</h3>' +
+        (metaParts.length ? '<div class="job-card__meta">' + metaParts.join("") + '</div>' : "") +
+        (job.short_description ? '<p class="job-card__desc">' + escapeHtml(job.short_description) + '</p>' : "") +
+        '<div class="job-card__foot">' +
+          '<a class="btn btn--primary" href="job-details.html?id=' + encodeURIComponent(job.id) + '">View Role &amp; Apply</a>' +
+        '</div>' +
+      '</article>';
+  }
+
+  async function loadJobs() {
+    var container = document.getElementById("jobsContainer");
+    try {
+      var result = await supabaseClient
+        .from("jobs")
+        .select("id,title,slug,location,country,work_arrangement,employment_type,experience_level,application_deadline,short_description")
+        .eq("status", "published")
+        .order("created_at", { ascending: false });
+
+      var data = result.data, error = result.error;
+
+      if (error) {
+        container.innerHTML = '<div class="jobs-empty jobs-empty--error">We couldn\u2019t load current vacancies right now. Please try again shortly, or reach us directly at <a href="mailto:info@ukahbookkeepingservices.ca">info@ukahbookkeepingservices.ca</a>.</div>';
+        return;
+      }
+
+      if (!data || !data.length) {
+        container.innerHTML = '<div class="jobs-empty">There are no open roles right now. <a href="talent-pool.html">Join our talent pool</a> and we\u2019ll reach out when a fitting role opens up.</div>';
+        return;
+      }
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "jobs";
+      wrapper.innerHTML = data.map(renderJobCard).join("");
+      container.innerHTML = "";
+      container.appendChild(wrapper);
+    } catch (err) {
+      container.innerHTML = '<div class="jobs-empty jobs-empty--error">We couldn\u2019t load current vacancies right now. Please try again shortly, or reach us directly at <a href="mailto:info@ukahbookkeepingservices.ca">info@ukahbookkeepingservices.ca</a>.</div>';
+    }
+  }
+
+  loadJobs();
+})();
+</script>
+</body>
+</html>

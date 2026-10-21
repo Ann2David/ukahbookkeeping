@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Independent Sales Partner Program | Ukah Bookkeeping Services</title>
+<meta name="description" content="Become an independent sales partner with UKAH Bookkeeping Services. Identify and develop business opportunities and earn 10% commission when applicable prospects become paying clients.">
+<link rel="canonical" href="https://www.ukahbookkeepingservices.ca/refer.html">
+<link rel="icon" type="image/png" href="UUlogo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+:root {
+  --navy: #12294B;
+  --navy-deep: #0B1E36;
+  --teal: #2FA79E;
+  --teal-dark: #23837C;
+  --teal-tint: #E7F4F2;
+  --amber: #C99A3E;
+  --paper: #FFFFFF;
+  --paper-alt: #FFFFFF;
+  --ink: #1C2B3A;
+  --ink-soft: #55677A;
+  --line: #DCD6C8;
+  --white: #FFFFFF;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --container: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --section-pad: clamp(56px, 9vw, 112px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; color: var(--navy); line-height: 1.15; }
+p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.container { max-width: var(--container); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-dark); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.eyebrow--light { color: #9FD9D2; }
+.section__head { max-width: 680px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section__title { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 600; }
+.section__title--light { color: var(--white); }
+.section__lede { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; max-width: 56ch; }
+.section__lede--light { color: #C9D6E0; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: 1px solid transparent; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--teal); color: var(--white); }
+.btn--primary:hover { background: var(--teal-dark); }
+.btn--dark { background: var(--navy); color: var(--white); }
+.btn--dark:hover { background: var(--navy-deep); }
+.btn--ghost-light { border-color: rgba(255,255,255,0.55); color: var(--white); }
+.btn--ghost-light:hover { background: rgba(255,255,255,0.12); }
+
+/* ---------- Top bar + header (same as index) ---------- */
+.site-top { position: sticky; top: 0; z-index: 100; width: 100%; }
+.topbar { background: var(--navy-deep); color: #C9D6E0; font-size: 0.85rem; }
+.topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 0; }
+.topbar__tagline { font-family: var(--font-mono); letter-spacing: 0.03em; color: #9FD9D2; }
+.topbar__tagline:hover { color: var(--white); }
+.topbar__contacts { display: flex; gap: 24px; }
+.topbar__item { display: inline-flex; align-items: center; gap: 6px; opacity: 0.9; }
+.topbar__item:hover { opacity: 1; color: var(--white); }
+@media (max-width: 720px) { .topbar__contacts { display: none; } }
+@media (max-width: 480px) {
+  .topbar__inner { justify-content: center; padding: 8px 0; }
+  .topbar__tagline { font-size: 0.78rem; text-align: center; }
+}
+
+.header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; overflow: visible; }
+.brand { display: flex; align-items: center; gap: 12px; height: 100%; position: relative; }
+.brand__logo { height: 128px; width: auto; object-fit: contain; mix-blend-mode: multiply; position: relative; z-index: 1; margin-block: -28px; }
+.nav__list { display: flex; gap: 18px; align-items: center; height: 100%; }
+.nav__item { display: flex; align-items: center; height: 100%; position: relative; }
+.nav__link { font-weight: 500; font-size: 0.95rem; color: var(--ink); position: relative; padding: 6px 0; display: inline-flex; align-items: center; }
+.nav__link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+.nav__link:hover::after, .nav__link.is-active::after { transform: scaleX(1); }
+.nav__link.is-active { color: var(--navy); font-weight: 600; }
+
+.nav__link-row { display: flex; align-items: center; gap: 4px; height: 100%; }
+.nav__caret-btn { background: none; border: none; padding: 6px; display: flex; align-items: center; justify-content: center; color: var(--ink-soft); transition: transform 0.25s ease, color 0.25s ease; }
+.nav__caret { display: inline-block; font-size: 0.7rem; }
+.nav__item:hover .nav__caret-btn, .nav__item.is-open .nav__caret-btn { transform: rotate(180deg); color: var(--teal); }
+.nav__dropdown { position: absolute; top: calc(100% + 12px); left: 0; min-width: 300px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 20px 40px -20px rgba(18,41,75,0.35); padding: 10px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); z-index: 90; }
+.nav__dropdown::before { content: ''; position: absolute; top: -15px; left: 0; width: 100%; height: 15px; }
+.nav__item:hover .nav__dropdown, .nav__item.is-open .nav__dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav__dropdown li + li { margin-top: 2px; }
+.nav__dropdown a { display: block; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--ink); transition: background 0.2s ease, color 0.2s ease; }
+.nav__dropdown a:hover { background: var(--teal-tint); color: var(--teal-dark); }
+
+.header__actions { display: flex; align-items: center; gap: 22px; }
+.nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
+.nav__toggle span { width: 24px; height: 2px; background: var(--navy); display: block; transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav__item--contact { display: none; }
+.nav__contact-btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 13px 26px; border-radius: 999px; background: var(--teal); color: var(--white); font-weight: 600; font-size: 0.95rem; }
+.nav__contact-btn:hover { background: var(--teal-dark); }
+
+@media (max-width: 900px) {
+  .header__contact-btn { display: none; }
+  .nav__toggle { display: flex; }
+  .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .nav.is-open { max-height: 80vh; overflow-y: auto; }
+  .nav__list { flex-direction: column; gap: 0; align-items: stretch; height: auto; padding: 10px var(--gutter) 20px; }
+  .nav__item { flex-direction: column; align-items: stretch; height: auto; }
+  .nav__link-row { justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .nav__link { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nav__link-row .nav__link { border-bottom: none; }
+  .nav__dropdown { position: static; box-shadow: none; border: none; padding: 0 0 8px 14px; min-width: 0; opacity: 1; visibility: visible; transform: none; display: none; }
+  .nav__item.is-open .nav__dropdown { display: block; }
+  .brand__logo { height: 88px; margin-block: -14px; }
+  .header__inner { height: 60px; }
+  .nav__item--contact { display: block; margin-top: 16px; }
+}
+@media (max-width: 480px) {
+  .header__inner { height: 54px; }
+  .brand__logo { height: 72px; margin-block: -10px; }
+}
+
+/* ---------- Sections ---------- */
+.section { padding: var(--section-pad) 0; }
+.section--tint { background: var(--teal-tint); }
+.section--dark { background: var(--navy-deep); }
+
+.hero { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%); color: var(--white); padding: clamp(72px, 11vw, 140px) 0 clamp(56px, 8vw, 96px); }
+.hero__content { max-width: 800px; }
+.hero__headline { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 600; color: var(--white); }
+.hero__headline-accent { color: #9FD9D2; font-weight: 500; }
+.hero__subtext { margin-top: 22px; font-size: 1.12rem; max-width: 60ch; color: #DCE6EC; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 34px; }
+@media (max-width: 640px) { .hero__actions .btn { width: 100%; justify-content: center; } }
+
+/* Cards (service-card style) */
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 36px 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.card:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 16px 30px -12px rgba(47,167,158,0.18); }
+.card__icon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--teal-tint); color: var(--teal-dark); display: inline-flex; align-items: center; justify-content: center; }
+.card__icon svg { width: 24px; height: 24px; }
+.card__title { font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
+.card__text { color: var(--ink-soft); font-size: 0.96rem; }
+.card__list { display: flex; flex-direction: column; gap: 8px; color: var(--ink-soft); font-size: 0.94rem; }
+.card__list li { display: flex; gap: 10px; align-items: flex-start; }
+.card__list li::before { content: "\2713"; flex: none; width: 20px; height: 20px; margin-top: 2px; display: inline-flex; align-items: center; justify-content: center; background: var(--teal); color: var(--white); border-radius: 50%; font-size: 0.65rem; }
+@media (max-width: 900px) { .card-grid { grid-template-columns: 1fr; } }
+
+/* Commission (dark kpi style) */
+.commission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: start; }
+.commission-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.kpi { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md); padding: 22px 20px; display: flex; flex-direction: column; gap: 4px; transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease; }
+.kpi:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.2); transform: translateY(-4px); }
+.kpi__label { color: #E2E8F0; font-weight: 600; font-size: 1rem; }
+.kpi__meta { color: #9FD9D2; font-family: var(--font-mono); font-size: 0.8rem; }
+@media (max-width: 900px) { .commission-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .commission-list { grid-template-columns: 1fr; } }
+
+/* Process */
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.step { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--teal); border-radius: var(--radius-md); padding: 26px 22px; }
+.step__title { font-size: 1.08rem; font-weight: 600; margin-bottom: 8px; }
+.step p { color: var(--ink-soft); font-size: 0.94rem; }
+.notice { margin-top: 32px; padding: 20px 22px; border-left: 3px solid var(--teal); background: var(--teal-tint); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; color: var(--navy); font-size: 0.96rem; }
+.notice strong { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-dark); display: block; margin-bottom: 6px; }
+@media (max-width: 900px) { .process { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .process { grid-template-columns: 1fr; } }
+
+/* Forms */
+form { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: clamp(24px, 4vw, 40px); box-shadow: 0 10px 25px -5px rgba(15,23,42,0.04); }
+.form-title { font-size: 1.5rem; margin-bottom: 24px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 26px; }
+.full { grid-column: 1 / -1; }
+label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 7px; }
+input, select, textarea { width: 100%; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px 14px; font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--white); transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(47,167,158,0.18); }
+textarea { min-height: 120px; resize: vertical; }
+.check { display: flex; gap: 10px; align-items: flex-start; }
+.check input { width: auto; margin-top: 5px; accent-color: var(--teal); }
+.check label { font-weight: 500; color: var(--ink-soft); margin: 0; }
+.status { margin-top: 16px; font-weight: 600; font-size: 0.95rem; }
+.success { color: var(--teal-dark); }
+.error { color: #B3372F; }
+@media (max-width: 700px) { .form-grid { grid-template-columns: 1fr; } form .btn { width: 100%; justify-content: center; } }
+
+/* ---------- Footer (same as index) ---------- */
+.footer { background: var(--navy-deep); color: #B9C7D3; padding-top: 64px; }
+.footer__grid { display: grid; grid-template-columns: 1.3fr 0.9fr 1.3fr 1.1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer__logo { height: 64px; width: auto; object-fit: contain; background: var(--paper); border-radius: var(--radius-sm); padding: 8px 12px; margin-bottom: 16px; }
+.footer__blurb { font-size: 0.92rem; max-width: 30ch; color: #9AABBA; margin-bottom: 20px; line-height: 1.5; }
+.footer__socials { display: flex; align-items: center; gap: 12px; }
+.footer__social-link { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #B9C7D3; transition: all 0.25s ease; }
+.footer__social-link svg { width: 18px; height: 18px; }
+.footer__social-link:hover { background: var(--teal); border-color: var(--teal); color: var(--white); transform: translateY(-2px); }
+.footer__heading { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+.footer__nav ul { display: flex; flex-direction: column; gap: 10px; }
+.footer__nav a { color: #B9C7D3; transition: color 0.2s ease; }
+.footer__nav a:hover { color: var(--white); }
+.footer__contact p { margin-bottom: 12px; display: flex; flex-direction: column; gap: 2px; font-size: 0.92rem; }
+.footer__label { font-size: 0.72rem; color: #7C8DA0; text-transform: uppercase; letter-spacing: 0.06em; }
+.footer__contact a { color: #B9C7D3; transition: color 0.2s ease; }
+.footer__contact a:hover { color: var(--teal); }
+.footer__bottom { padding: 22px 0; font-size: 0.82rem; color: #7C8DA0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
+.footer__credit { color: #7C8DA0; }
+@media (max-width: 960px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .footer__grid { grid-template-columns: 1fr; } .footer__bottom { justify-content: center; text-align: center; } }
+
+.whatsapp-btn { position: fixed; bottom: 24px; right: 24px; width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 24px -8px rgba(0,0,0,0.4); z-index: 60; transition: transform 0.2s ease; }
+.whatsapp-btn:hover { transform: scale(1.08); }
+.whatsapp-btn__icon { width: 30px; height: 30px; }
+@media (max-width: 480px) { .whatsapp-btn { width: 50px; height: 50px; bottom: 16px; right: 16px; } .whatsapp-btn__icon { width: 26px; height: 26px; } }
+</style>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343513690.js"></script>
+<!-- End of HubSpot Embed Code -->
+</head>
+<body>
+
+<div class="site-top">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#application" class="topbar__tagline">Clean Books. On-Time Taxes. Zero Hassle</a>
+      <div class="topbar__contacts">
+        <a href="mailto:info@ukahbookkeepingservices.ca" class="topbar__item"><span aria-hidden="true">&#9993;</span> info@ukahbookkeepingservices.ca</a>
+        <a href="tel:+12269799080" class="topbar__item"><span aria-hidden="true">&#9742;</span> +1 (226) 979-9080</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="brand__logo">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+          <li class="nav__item nav__item--has-dropdown" id="servicesNavItem">
+            <div class="nav__link-row">
+              <a href="" class="nav__link">Services</a>
+              <button type="button" class="nav__caret-btn" id="servicesCaret" aria-expanded="false" aria-controls="servicesDropdown" aria-label="Toggle services submenu">
+                <span class="nav__caret" aria-hidden="true">&#9662;</span>
+              </button>
+            </div>
+            <ul class="nav__dropdown" id="servicesDropdown">
+              <li><a href="servic1.html">Core Bookkeeping &amp; Clean Up</a></li>
+              <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+              <li><a href="service3.html">HST / GST Compliance</a></li>
+              <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="Product.html" class="nav__link">Product</a></li>
+          <li class="nav__item"><a href="nigeria.html" class="nav__link">Nigeria</a></li>
+          <li class="nav__item"><a href="resources.html" class="nav__link">Resources</a></li>
+          <li class="nav__item"><a href="team.html" class="nav__link">Our Team</a></li>
+          <li class="nav__item"><a href="career.html" class="nav__link">Careers</a></li>
+          <li class="nav__item"><a href="refer.html" class="nav__link is-active">Referral</a></li>
+          <li class="nav__item"><a href="FAQ.html" class="nav__link">FAQ</a></li>
+          <li class="nav__item nav__item--contact"><a href="contact.html" class="nav__contact-btn">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="contact.html" class="btn btn--primary header__contact-btn">Contact</a>
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- Hero -->
+<section class="hero" aria-label="Introduction">
+  <div class="container hero__content">
+    <p class="eyebrow eyebrow--light">Independent Sales Partner Program</p>
+    <h1 class="hero__headline">You find the opportunity.<br><span class="hero__headline-accent">We handle the bookkeeping.</span></h1>
+    <p class="hero__subtext">Build relationships with businesses that need stronger accounting and finance support. UKAH handles the technical assessment, proposal, onboarding and service delivery while you focus on prospecting and developing opportunities.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#application">Become a Partner</a>
+      <a class="btn btn--ghost-light" href="#commission">See Commission</a>
+    </div>
+  </div>
+</section>
+
+<!-- Opportunity -->
+<section class="section" id="opportunity">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">The Opportunity</p>
+      <h2 class="section__title">Not a one-time referral. A sales partnership.</h2>
+      <p class="section__lede">UKAH is building a network of independent sales professionals and business-development individuals who can identify, qualify and develop potential clients using their own networks, prospecting skills and relationships.</p>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3 class="card__title">Prospect</h3>
+        <p class="card__text">Use your network, relationships and prospecting methods to identify businesses that need financial support.</p>
+      </article>
+      <article class="card">
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 class="card__title">Develop</h3>
+        <p class="card__text">Build the relationship, understand the prospect's needs and develop a qualified opportunity.</p>
+      </article>
+      <article class="card">
+        <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg></div>
+        <h3 class="card__title">Partner</h3>
+        <p class="card__text">UKAH handles the accounting expertise and service delivery while you continue to develop business opportunities.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Who we're looking for -->
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Who We're Looking For</p>
+      <h2 class="section__title">Built for people who know how to sell.</h2>
+      <p class="section__lede">This opportunity is particularly suited to people comfortable with prospecting, relationship-building, follow-up and business development.</p>
+    </div>
+    <div class="card-grid">
+      <article class="card"><h3 class="card__title">Sales professionals</h3><p class="card__text">People with a track record or practical experience in selling services and building client relationships.</p></article>
+      <article class="card"><h3 class="card__title">Business-development professionals</h3><p class="card__text">Independent professionals who can identify opportunities and develop them through a sales process.</p></article>
+      <article class="card"><h3 class="card__title">Connected professionals</h3><p class="card__text">People with meaningful access to business owners or decision-makers in our target markets.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Priority markets -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Initial Priority Markets</p>
+      <h2 class="section__title">Start where UKAH has a clear proposition.</h2>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <h3 class="card__title">Law firms</h3>
+        <ul class="card__list"><li>Monthly bookkeeping</li><li>Trust-related bookkeeping support</li><li>CosmoLex support</li><li>QuickBooks Online support</li><li>HST/GST</li><li>Cleanup &amp; catch-up</li><li>Tax and filing support</li></ul>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Construction &amp; trades</h3>
+        <ul class="card__list"><li>Monthly bookkeeping</li><li>Job-costing support</li><li>Expense and transaction tracking</li><li>Cash-flow visibility</li><li>Cleanup &amp; catch-up</li><li>QuickBooks Online setup/optimization</li><li>Tax and HST/GST support</li></ul>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Nigerian business market</h3>
+        <p class="card__text">For UKAH's Nigerian audience, the offer can include:</p>
+        <ul class="card__list"><li>Fully Managed Accounting</li><li>Direct Hire Recruitment</li><li>Build Your Finance Team</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Commission -->
+<section class="section section--dark" id="commission">
+  <div class="container commission-grid">
+    <div>
+      <p class="eyebrow eyebrow--light">Partner Earnings</p>
+      <h2 class="section__title section__title--light">10% commission when the business becomes a paying client.</h2>
+      <p class="section__lede section__lede--light">There is no salary, upfront payment or payment simply for providing a lead. The partner earns commission when a prospect they have developed becomes a paying UKAH client and the applicable fee is collected.</p>
+    </div>
+    <div class="commission-list">
+      <div class="kpi"><span class="kpi__label">Monthly bookkeeping</span><span class="kpi__meta">First 3 months</span></div>
+      <div class="kpi"><span class="kpi__label">Cleanup &amp; catch-up</span><span class="kpi__meta">One-time</span></div>
+      <div class="kpi"><span class="kpi__label">QuickBooks Online</span><span class="kpi__meta">Setup/optimization</span></div>
+      <div class="kpi"><span class="kpi__label">CosmoLex</span><span class="kpi__meta">Setup/support</span></div>
+      <div class="kpi"><span class="kpi__label">T1 tax filing</span><span class="kpi__meta">One-time</span></div>
+      <div class="kpi"><span class="kpi__label">HST/GST</span><span class="kpi__meta">According to agreed contract terms</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section__title">A structured path from application to commission.</h2>
+    </div>
+    <div class="process">
+      <div class="step"><h3 class="step__title">1. Apply</h3><p>Tell us about your sales experience and network.</p></div>
+      <div class="step"><h3 class="step__title">2. Qualification</h3><p>UKAH reviews your application and assesses fit.</p></div>
+      <div class="step"><h3 class="step__title">3. Onboarding</h3><p>Learn UKAH's services, messaging and lead process.</p></div>
+      <div class="step"><h3 class="step__title">4. Develop opportunities</h3><p>Prospect, qualify and develop opportunities for UKAH.</p></div>
+    </div>
+    <div class="notice"><strong>Long-term model</strong>Marketing → Partner application → Qualification → Onboarding → Partner prospecting → Qualified opportunity → UKAH sales process → Client conversion → Commission.</div>
+  </div>
+</section>
+
+<!-- Application form -->
+<section class="section" id="application">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Partner Application</p>
+      <h2 class="section__title">Tell UKAH how you can grow the business.</h2>
+      <p class="section__lede">Every interested applicant enters a structured application and qualification process rather than simply contacting UKAH through DMs.</p>
+    </div>
+    <form id="applicationForm">
+      <h3 class="form-title">Independent Sales Partner Application</h3>
+      <div class="form-grid">
+        <div><label for="full_name">Full Name *</label><input id="full_name" required></div>
+        <div><label for="email">Email Address *</label><input id="email" type="email" required></div>
+        <div><label for="phone">Phone Number *</label><input id="phone" required></div>
+        <div><label for="location">Location *</label><input id="location" required placeholder="City, State/Province, Country"></div>
+        <div><label for="applicant_current_role">Current Role / Occupation</label><input id="applicant_current_role"></div>
+        <div><label for="sales_experience_years">Years of Sales / Business Development Experience</label><input id="sales_experience_years" type="number" min="0" step="0.5"></div>
+        <div class="full"><label for="sales_experience">Describe your sales or business-development experience *</label><textarea id="sales_experience" required></textarea></div>
+        <div class="full"><label for="industry_connections">What industries or types of businesses do you have access to? *</label><textarea id="industry_connections" required></textarea></div>
+        <div><label for="target_industries">Target Industries</label><select id="target_industries" multiple size="4"><option>Law Firms</option><option>Construction &amp; Trades</option><option>Nigerian Businesses</option><option>Other</option></select></div>
+        <div><label for="relevant_market">Relevant Market / Geography</label><input id="relevant_market" placeholder="e.g. Lagos, Abuja, Ontario"></div>
+        <div class="full"><label for="prospecting_methods">How do you prospect for clients? *</label><textarea id="prospecting_methods" required placeholder="Networking, referrals, LinkedIn, cold outreach, events, existing relationships, etc."></textarea></div>
+        <div class="full"><label for="business_network">Describe your relevant business network *</label><textarea id="business_network" required></textarea></div>
+        <div class="full"><label for="motivation">Why do you want to become a UKAH Independent Sales Partner? *</label><textarea id="motivation" required></textarea></div>
+        <div><label for="availability">Availability</label><select id="availability"><option value="">Select</option><option>Part-time</option><option>Full-time</option><option>Flexible / Independent</option></select></div>
+        <div><label for="linkedin_url">LinkedIn URL</label><input id="linkedin_url" type="url"></div>
+        <div class="full"><label for="additional_information">Additional Information</label><textarea id="additional_information"></textarea></div>
+        <div class="full check"><input type="checkbox" id="consent" required><label for="consent">I confirm that the information provided is accurate and I consent to UKAH contacting me about the Independent Sales Partner Program. *</label></div>
+      </div>
+      <button class="btn btn--primary" type="submit" id="submitApplication">Submit Partner Application</button>
+      <div id="applicationStatus" class="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- Referral form -->
+<section class="section section--tint" id="submit-referral">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Already Have an Opportunity?</p>
+      <h2 class="section__title">Submit a business prospect.</h2>
+      <p class="section__lede">If you are already working with UKAH as a partner, use this form to submit a qualified business opportunity. This is different from applying to become a partner.</p>
+    </div>
+    <form id="referralForm">
+      <div class="form-grid">
+        <div><label for="r_partner_name">Partner Name *</label><input id="r_partner_name" required></div>
+        <div><label for="r_partner_email">Partner Email *</label><input id="r_partner_email" type="email" required></div>
+        <div><label for="business_name">Business Name *</label><input id="business_name" required></div>
+        <div><label for="business_owner_contact">Business Owner / Contact *</label><input id="business_owner_contact" required></div>
+        <div><label for="business_email">Business Email</label><input id="business_email" type="email"></div>
+        <div><label for="business_phone">Business Phone</label><input id="business_phone"></div>
+        <div><label for="business_website">Business Website</label><input id="business_website" type="url"></div>
+        <div><label for="business_location">Business Location *</label><input id="business_location" required></div>
+        <div><label for="country">Country *</label><input id="country" required></div>
+        <div><label for="city_state_province">City / State / Province</label><input id="city_state_province"></div>
+        <div><label for="industry_business_type">Industry / Business Type *</label><input id="industry_business_type" required></div>
+        <div><label for="relationship_to_business">Relationship to Business *</label><select id="relationship_to_business" required><option value="">Select</option><option>Client</option><option>Friend</option><option>Family</option><option>Business Partner</option><option>Professional Contact</option><option>Colleague</option><option>Prospect I developed</option><option>Other</option></select></div>
+        <div class="full"><label for="business_description">What does the business do? *</label><textarea id="business_description" required></textarea></div>
+        <div><label for="service_interest">Service Interest *</label><select id="service_interest" required><option value="">Select</option><option>Bookkeeping</option><option>Accounting Support</option><option>Fully Managed Accounting</option><option>Direct Hire Recruitment</option><option>Build Your Finance Team</option><option>Financial Record Management</option><option>Payroll Support</option><option>Tax/Compliance Support</option><option>QuickBooks Online</option><option>CosmoLex Support</option><option>Not Sure</option><option>Other</option></select></div>
+        <div><label for="preferred_contact_method">Preferred Contact Method *</label><select id="preferred_contact_method" required><option>Email</option><option>Phone</option><option>WhatsApp</option></select></div>
+        <div class="full"><label for="main_challenge">Main challenge / opportunity *</label><textarea id="main_challenge" required></textarea></div>
+        <div><label for="contact_knows_referral">Does the business owner/contact know about this referral? *</label><select id="contact_knows_referral" required><option value="">Select</option><option value="true">Yes</option><option value="false">No</option></select></div>
+        <div class="full check"><input type="checkbox" id="referral_consent" required><label for="referral_consent">I confirm that the information provided is accurate and I consent to UKAH contacting me regarding this opportunity. *</label></div>
+      </div>
+      <button class="btn btn--primary" type="submit">Submit Business Prospect</button>
+      <div id="referralStatus" class="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="footer__logo">
+      <p class="footer__blurb">Accurate bookkeeping, practical reporting, and dependable financial systems for small businesses.</p>
+      <div class="footer__socials" aria-label="Social Media">
+        <a href="https://www.instagram.com/ukahbookkeepingservices?igsh=ZmZ6cDl1ZmZma2xi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/ukah-bookkeeping-services/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer">
+      <h3 class="footer__heading">Main Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="nigeria.html">Nigeria</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="career.html">Careers</a></li>
+        <li><a href="refer.html">Referral</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__nav" aria-label="Services">
+      <h3 class="footer__heading">Our Services</h3>
+      <ul>
+        <li><a href="servic1.html">Core Bookkeeping</a></li>
+        <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+        <li><a href="service3.html">HST / GST Compliance</a></li>
+        <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__contact">
+      <h3 class="footer__heading">Contact</h3>
+      <p><span class="footer__label">Email</span><a href="mailto:info@ukahbookkeepingservices.ca">info@ukahbookkeepingservices.ca</a></p>
+      <p><span class="footer__label">Phone</span><a href="tel:+12269799080">+1 (226) 979-9080</a></p>
+      <p><span class="footer__label">Address</span><span>Kitchener, Ontario, Canada</span></p>
+      <p><span class="footer__label">Hours</span><span>Mon&ndash;Thu, 8:00 AM&ndash;6:00 PM EST, Fri 8:00 AM&ndash;6:30 PM EST, Sat 9:00 AM&ndash;5:00 PM EST</span></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Ukah Bookkeeping Services. All Rights Reserved.</p>
+    <p class="footer__credit">Independent Sales Partner Program terms and commission eligibility are subject to UKAH's agreed partner arrangements. &nbsp;|&nbsp; Built By SOGROVA</p>
+  </div>
+</footer>
+
+<a id="whatsappButton" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-btn__icon">
+    <path fill="currentColor" d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.65 27 28 21.62 28 15S22.65 3 16.02 3Zm0 21.7c-1.98 0-3.85-.55-5.44-1.5l-.39-.23-4.62 1.08 1.1-4.5-.25-.4A9.62 9.62 0 0 1 6.3 15c0-5.35 4.36-9.7 9.72-9.7 5.35 0 9.7 4.35 9.7 9.7 0 5.36-4.35 9.7-9.7 9.7Zm5.32-7.26c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.14-.2.3-.75.95-.92 1.14-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.3-1.02 1-1.02 2.43 0 1.43 1.05 2.82 1.2 3.01.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/>
+  </svg>
+</a>
+
+<script>
+window.SITE_CONFIG = { whatsapp: { number: "12269799080", message: "Hello, I visited your website and I would like to make an enquiry." } };
+
+(function () {
+  "use strict";
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var waBtn = document.getElementById("whatsappButton");
+  if (waBtn) {
+    var cfg = window.SITE_CONFIG.whatsapp;
+    waBtn.setAttribute("href", "https://wa.me/" + cfg.number + "?text=" + encodeURIComponent(cfg.message));
+  }
+
+  var navToggle = document.getElementById("navToggle");
+  var siteNav = document.getElementById("site-nav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = siteNav.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    siteNav.querySelectorAll(".nav__dropdown a, .nav__list > .nav__item > .nav__link, .nav__contact-btn").forEach(function (link) {
+      link.addEventListener("click", function () {
+        siteNav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  var item = document.getElementById("servicesNavItem");
+  var caret = document.getElementById("servicesCaret");
+  var dropdown = document.getElementById("servicesDropdown");
+  if (item && caret && dropdown) {
+    function openMenu() { item.classList.add("is-open"); caret.setAttribute("aria-expanded", "true"); }
+    function closeMenu() { item.classList.remove("is-open"); caret.setAttribute("aria-expanded", "false"); }
+    caret.addEventListener("click", function (e) {
+      e.preventDefault(); e.stopPropagation();
+      item.classList.contains("is-open") ? closeMenu() : openMenu();
+    });
+    if (window.matchMedia("(min-width: 901px)").matches) {
+      item.addEventListener("mouseenter", openMenu);
+      item.addEventListener("mouseleave", closeMenu);
+    }
+    dropdown.addEventListener("click", function (e) { e.stopPropagation(); });
+    document.addEventListener("click", function (e) {
+      if (item.classList.contains("is-open") && !item.contains(e.target)) closeMenu();
+    });
+  }
+})();
+
+/* ---------- Supabase forms (unchanged logic) ---------- */
+const SUPABASE_URL='https://ecmjucyvqhxvimuaovxk.supabase.co'; const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk';
+const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const $=id=>document.getElementById(id);
+function val(id){return $(id).value.trim()}
+$('applicationForm').addEventListener('submit',async e=>{e.preventDefault();const s=$('applicationStatus');s.className='status';s.textContent='Submitting application...';const targets=[...$('target_industries').selectedOptions].map(o=>o.value);const {error}=await sb.from('partner_applications').insert([{full_name:val('full_name'),email:val('email'),phone:val('phone'),location:val('location'),country:val('location').split(',').pop().trim(),applicant_current_role:val('applicant_current_role'),sales_experience_years:$('sales_experience_years').value?Number($('sales_experience_years').value):null,sales_experience:val('sales_experience'),industry_connections:val('industry_connections'),target_industries:targets,prospecting_methods:val('prospecting_methods'),business_network:val('business_network'),relevant_market:val('relevant_market'),motivation:val('motivation'),availability:val('availability'),linkedin_url:val('linkedin_url'),additional_information:val('additional_information')}]);if(error){console.error(error);s.className='status error';s.textContent='We could not submit your application: '+error.message;return}s.className='status success';s.textContent='Thank you. Your application has been received. UKAH will review it and contact you about the next stage.';e.target.reset();});
+$('referralForm').addEventListener('submit',async e=>{e.preventDefault();const s=$('referralStatus');s.className='status';s.textContent='Submitting business prospect...';const {error}=await sb.from('partner_referrals').insert([{partner_name:val('r_partner_name'),partner_email:val('r_partner_email'),business_name:val('business_name'),business_owner_contact:val('business_owner_contact'),business_email:val('business_email')||null,business_phone:val('business_phone')||null,business_website:val('business_website')||null,business_location:val('business_location'),country:val('country'),city_state_province:val('city_state_province')||null,industry_business_type:val('industry_business_type'),business_description:val('business_description'),service_interest:val('service_interest'),main_challenge:val('main_challenge'),relationship_to_business:val('relationship_to_business'),contact_knows_referral:$('contact_knows_referral').value==='true',preferred_contact_method:val('preferred_contact_method'),consent:$('referral_consent').checked}]);if(error){console.error(error);s.className='status error';s.textContent='We could not submit the business prospect: '+error.message;return}s.className='status success';s.textContent='Business prospect submitted successfully. UKAH can now review and follow up on the opportunity.';e.target.reset();});
+</script>
+</body>
+</html>

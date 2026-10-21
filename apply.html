@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply | UKAH Careers</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#F6F4EF;color:#1C2B3A}.container{max-width:850px;margin:auto;padding:40px 20px}.card{background:#fff;border:1px solid #DCD6C8;border-radius:14px;padding:clamp(22px,5vw,42px)}h1,h2{color:#12294B}.form-group{margin-bottom:17px}label{display:block;font-weight:700;margin-bottom:6px}input,textarea,select{width:100%;box-sizing:border-box;padding:11px;border:1px solid #DCD6C8;border-radius:6px;font:inherit}textarea{min-height:110px;resize:vertical}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.check{display:flex;gap:9px;align-items:flex-start}.check input{width:auto}.btn{background:#2FA79E;color:#fff;border:0;padding:13px 20px;border-radius:999px;font-weight:700;cursor:pointer}.status{margin-top:14px;padding:12px;border-radius:6px}.error{background:#FBEAE6;color:#C0432F}.success{background:#E7F4F2;color:#23837C}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="container"><div class="card">
+<h1>Apply for This Position</h1>
+<p id="jobName">Loading position...</p>
+<form id="applicationForm" enctype="multipart/form-data">
+<h2>Applicant Information</h2>
+<div class="grid">
+<div class="form-group"><label>Full Name *</label><input id="fullName" required></div>
+<div class="form-group"><label>Email Address *</label><input type="email" id="email" required></div>
+<div class="form-group"><label>Phone Number *</label><input id="phone" required></div>
+<div class="form-group"><label>Current Location</label><input id="currentLocation"></div>
+<div class="form-group"><label>Country</label><input id="country"></div>
+<div class="form-group"><label>City / State / Province</label><input id="cityState"></div>
+</div>
+
+<h2>Professional Information</h2>
+<div class="grid">
+<div class="form-group"><label>Current Job Title</label><input id="currentJobTitle"></div>
+<div class="form-group"><label>Years of Professional Experience *</label><input id="yearsExperience" required></div>
+<div class="form-group"><label>Highest Level of Education *</label><input id="education" required></div>
+<div class="form-group"><label>Relevant Qualification / Certification</label><input id="qualification"></div>
+<div class="form-group"><label>LinkedIn Profile</label><input type="url" id="linkedin"></div>
+<div class="form-group"><label>Portfolio / Website</label><input type="url" id="portfolio"></div>
+<div class="form-group"><label>Current / Most Recent Employer</label><input id="employer"></div>
+</div>
+
+<h2>Application</h2>
+<div class="form-group"><label>Why are you interested in working with UKAH? *</label><textarea id="interestReason" required></textarea></div>
+<div class="form-group"><label>Tell us briefly about your relevant experience. *</label><textarea id="relevantExperience" required></textarea></div>
+<div class="form-group"><label>What makes you a good fit for this role? *</label><textarea id="fitReason" required></textarea></div>
+<div class="grid">
+<div class="form-group"><label>When can you start? *</label><input id="availability" required></div>
+<div class="form-group"><label>Preferred Work Arrangement *</label><select id="workArrangement" required><option value="">Select</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></div>
+</div>
+
+<h2>CV & Supporting Documents</h2>
+<div class="form-group"><label>Upload CV / Resume * (PDF, DOC, DOCX)</label><input type="file" id="cv" accept=".pdf,.doc,.docx" required></div>
+<div class="form-group"><label>Supporting Document / Portfolio (optional)</label><input type="file" id="supporting" accept=".pdf,.doc,.docx"></div>
+
+<h2>References</h2>
+<div class="grid">
+<div class="form-group"><label>Reference Name</label><input id="refName"></div>
+<div class="form-group"><label>Reference Email</label><input type="email" id="refEmail"></div>
+<div class="form-group"><label>Reference Phone</label><input id="refPhone"></div>
+<div class="form-group"><label>Relationship</label><input id="refRelationship"></div>
+</div>
+
+<div class="form-group check">
+<input type="checkbox" id="declaration" required>
+<label for="declaration">I confirm that the information provided is accurate and complete to the best of my knowledge.</label>
+</div>
+<div class="form-group check">
+<input type="checkbox" id="futureContact" required>
+<label for="futureContact">I understand that UKAH may contact me regarding this application and future opportunities relevant to my profile.</label>
+</div>
+
+<button class="btn" id="submitBtn" type="submit">Submit Application</button>
+<p id="status" class="status"></p>
+</form>
+</div></main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="https://ecmjucyvqhxvimuaovxk.supabase.co";
+const SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk";
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const jobId=new URLSearchParams(location.search).get("job");
+
+async function loadJob(){
+ const {data,error}=await supabaseClient.from("jobs").select("id,title,status").eq("id",jobId).eq("status","published").single();
+ if(error||!data){document.getElementById("jobName").textContent="This position is no longer accepting applications.";document.getElementById("applicationForm").remove();return}
+ document.getElementById("jobName").textContent="Position: "+data.title;
+}
+function setStatus(msg,type){const el=document.getElementById("status");el.textContent=msg;el.className="status "+type}
+function safeFileName(name){return name.toLowerCase().replace(/[^a-z0-9._-]/g,"-")}
+function makeId(){return crypto.randomUUID ? crypto.randomUUID() : Date.now()+"-"+Math.random().toString(16).slice(2)}
+
+document.getElementById("applicationForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+ if(!jobId){setStatus("No job was selected.","error");return}
+ const btn=document.getElementById("submitBtn");btn.disabled=true;btn.textContent="Submitting...";
+ setStatus("Uploading documents and submitting your application...","");
+
+ const applicationId=makeId();
+ const cv=document.getElementById("cv").files[0];
+ const supporting=document.getElementById("supporting").files[0];
+ if(!cv){setStatus("Please upload your CV.","error");btn.disabled=false;return}
+
+ // Keep files private. The path is saved in the applications table.
+ const cvPath=applicationId+"/"+safeFileName(cv.name);
+ let result=await supabaseClient.storage.from("career-cvs").upload(cvPath,cv,{upsert:false});
+ if(result.error){setStatus("CV upload failed: "+result.error.message,"error");btn.disabled=false;return}
+
+ let supportingPath=null;
+ if(supporting){
+   supportingPath=applicationId+"/"+safeFileName(supporting.name);
+   result=await supabaseClient.storage.from("career-supporting-documents").upload(supportingPath,supporting,{upsert:false});
+   if(result.error){
+     await supabaseClient.storage.from("career-cvs").remove([cvPath]);
+     setStatus("Supporting document upload failed: "+result.error.message,"error");btn.disabled=false;return
+   }
+ }
+
+ const payload={
+  id:applicationId,job_id:jobId,
+  full_name:document.getElementById("fullName").value.trim(),
+  email:document.getElementById("email").value.trim(),
+  phone:document.getElementById("phone").value.trim(),
+  current_location:document.getElementById("currentLocation").value.trim(),
+  country:document.getElementById("country").value.trim(),
+  city_state:document.getElementById("cityState").value.trim(),
+  current_job_title:document.getElementById("currentJobTitle").value.trim(),
+  years_experience:document.getElementById("yearsExperience").value.trim(),
+  education:document.getElementById("education").value.trim(),
+  qualification:document.getElementById("qualification").value.trim(),
+  linkedin_url:document.getElementById("linkedin").value.trim()||null,
+  portfolio_url:document.getElementById("portfolio").value.trim()||null,
+  current_employer:document.getElementById("employer").value.trim(),
+  interest_reason:document.getElementById("interestReason").value.trim(),
+  relevant_experience:document.getElementById("relevantExperience").value.trim(),
+  fit_reason:document.getElementById("fitReason").value.trim(),
+  availability:document.getElementById("availability").value.trim(),
+  preferred_work_arrangement:document.getElementById("workArrangement").value,
+  cv_path:cvPath,supporting_document_path:supportingPath,
+  reference_name:document.getElementById("refName").value.trim(),
+  reference_email:document.getElementById("refEmail").value.trim()||null,
+  reference_phone:document.getElementById("refPhone").value.trim(),
+  reference_relationship:document.getElementById("refRelationship").value.trim(),
+  declaration_accepted:document.getElementById("declaration").checked
+ };
+
+ const {error}=await supabaseClient.from("applications").insert(payload);
+ if(error){
+   await supabaseClient.storage.from("career-cvs").remove([cvPath]);
+   if(supportingPath) await supabaseClient.storage.from("career-supporting-documents").remove([supportingPath]);
+   setStatus("Application could not be submitted: "+error.message,"error");
+   btn.disabled=false;btn.textContent="Submit Application";return;
+ }
+
+ setStatus("Thank you. Your application has been received. The UKAH team will review it and contact shortlisted candidates.","success");
+ document.getElementById("applicationForm").reset();
+ btn.disabled=false;btn.textContent="Submit Application";
+});
+loadJob();
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Our Talent Pool | UKAH</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#F6F4EF;color:#1C2B3A}.container{max-width:750px;margin:auto;padding:50px 20px}.card{background:#fff;border:1px solid #DCD6C8;border-radius:14px;padding:35px}h1{color:#12294B}.form-group{margin-bottom:16px}label{display:block;font-weight:700;margin-bottom:6px}input,textarea{width:100%;box-sizing:border-box;padding:11px;border:1px solid #DCD6C8;border-radius:6px;font:inherit}textarea{min-height:110px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.btn{background:#2FA79E;color:#fff;border:0;padding:13px 20px;border-radius:999px;font-weight:700;cursor:pointer}.status{margin-top:14px;padding:12px;border-radius:6px}.error{background:#FBEAE6;color:#C0432F}.success{background:#E7F4F2;color:#23837C}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main class="container"><div class="card">
+<h1>Join the UKAH Talent Pool</h1>
+<p>Submit your information and CV to be considered for future opportunities that match your skills and experience.</p>
+<form id="talentForm">
+<div class="grid">
+<div class="form-group"><label>Full Name *</label><input id="fullName" required></div>
+<div class="form-group"><label>Email *</label><input type="email" id="email" required></div>
+<div class="form-group"><label>Phone</label><input id="phone"></div>
+<div class="form-group"><label>Country</label><input id="country"></div>
+<div class="form-group"><label>City / State / Province</label><input id="cityState"></div>
+<div class="form-group"><label>Current Location</label><input id="currentLocation"></div>
+<div class="form-group"><label>Current Job Title</label><input id="jobTitle"></div>
+<div class="form-group"><label>Years of Experience</label><input id="experience"></div>
+<div class="form-group"><label>Highest Education</label><input id="education"></div>
+<div class="form-group"><label>Qualification / Certification</label><input id="qualification"></div>
+<div class="form-group"><label>LinkedIn</label><input type="url" id="linkedin"></div>
+<div class="form-group"><label>Portfolio / Website</label><input type="url" id="portfolio"></div>
+</div>
+<div class="form-group"><label>CV / Resume *</label><input type="file" id="cv" accept=".pdf,.doc,.docx" required></div>
+<div class="form-group"><label>Additional Information</label><textarea id="additional"></textarea></div>
+<button class="btn" type="submit">Submit Your CV</button><p id="status" class="status"></p>
+</form>
+</div></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="https://ecmjucyvqhxvimuaovxk.supabase.co";
+const SUPABASE_ANON_KEY= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk";
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+function setStatus(m,t){const e=document.getElementById("status");e.textContent=m;e.className="status "+t}
+function id(){return crypto.randomUUID?crypto.randomUUID():Date.now()+"-"+Math.random().toString(16).slice(2)}
+function clean(s){return s.toLowerCase().replace(/[^a-z0-9._-]/g,"-")}
+document.getElementById("talentForm").addEventListener("submit",async e=>{
+ e.preventDefault();setStatus("Uploading CV...","");
+ const file=document.getElementById("cv").files[0];if(!file){setStatus("Please upload your CV.","error");return}
+ const recordId=id(),path=recordId+"/"+clean(file.name);
+ const upload=await supabaseClient.storage.from("career-cvs").upload(path,file);
+ if(upload.error){setStatus("Upload failed: "+upload.error.message,"error");return}
+ const payload={
+  id:recordId,full_name:document.getElementById("fullName").value.trim(),email:document.getElementById("email").value.trim(),
+  phone:document.getElementById("phone").value.trim(),country:document.getElementById("country").value.trim(),
+  city_state:document.getElementById("cityState").value.trim(),current_location:document.getElementById("currentLocation").value.trim(),
+  current_job_title:document.getElementById("jobTitle").value.trim(),years_experience:document.getElementById("experience").value.trim(),
+  education:document.getElementById("education").value.trim(),qualification:document.getElementById("qualification").value.trim(),
+  linkedin_url:document.getElementById("linkedin").value.trim()||null,portfolio_url:document.getElementById("portfolio").value.trim()||null,
+  cv_path:path,additional_information:document.getElementById("additional").value.trim()
+ };
+ const result=await supabaseClient.from("talent_pool").insert(payload);
+ if(result.error){await supabaseClient.storage.from("career-cvs").remove([path]);setStatus("Could not submit: "+result.error.message,"error");return}
+ setStatus("Thank you. Your CV has been received for future opportunities.","success");document.getElementById("talentForm").reset();
+});
+</script></body></html>

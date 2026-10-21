@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources | Ukah Bookkeeping Services</title>
+<meta name="description" content="Free bookkeeping templates, guides and expert articles to help your small business stay financially organized.">
+
+<meta name="description" content="Free bookkeeping templates, guides, and expert articles to help your small business stay financially organized.">
+<meta name="keywords" content="free bookkeeping checklist, bookkeeping templates, small business finance guides, bookkeeping resources Ontario">
+<link rel="canonical" href="https://www.ukahbookkeepingservices.ca/resources.html">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ukah Bookkeeping Services">
+<meta property="og:title" content="Free Bookkeeping Resources | Ukah Bookkeeping Services">
+<meta property="og:description" content="Practical bookkeeping templates, frameworks, and expert articles to help your business stay financially organized.">
+<meta property="og:url" content="https://www.ukahbookkeepingservices.ca/resources.html">
+<meta property="og:image" content="https://www.ukahbookkeepingservices.ca/og-image.jpg">
+<meta property="og:locale" content="en_CA">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Bookkeeping Resources | Ukah Bookkeeping Services">
+<meta name="twitter:description" content="Free templates, frameworks, and articles for small business financial clarity.">
+<meta name="twitter:image" content="https://www.ukahbookkeepingservices.ca/og-image.jpg">
+
+<link rel="icon" type="image/png" href="UUlogo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+:root {
+  --navy: #12294B;
+  --navy-deep: #0B1E36;
+  --teal: #2FA79E;
+  --teal-dark: #23837C;
+  --teal-tint: #E7F4F2;
+  --amber: #C99A3E;
+  --paper: #FFFFFF;
+  --paper-alt: #FBFAF7;
+  --ink: #1C2B3A;
+  --ink-soft: #55677A;
+  --line: #DCD6C8;
+  --white: #FFFFFF;
+  --error: #C0432F;
+  --error-tint: #FBEAE6;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --container: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --section-pad: clamp(56px, 9vw, 112px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+html, body { max-width: 100%; overflow-x: hidden; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; color: var(--navy); line-height: 1.15; }
+p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.container { max-width: var(--container); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.eyebrow { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-dark); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.eyebrow--light { color: #9FD9D2; }
+.section__head { max-width: 680px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section__title { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 600; }
+.section__lede { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; max-width: 56ch; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; border: 1px solid transparent; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+.btn--primary { background: var(--teal); color: var(--white); }
+.btn--primary:hover { background: var(--teal-dark); }
+.btn--ghost { background: transparent; color: var(--ink-soft); border-color: var(--line); }
+.btn--ghost:hover { background: var(--paper-alt); color: var(--ink); }
+.btn--block { width: 100%; }
+
+/* Small screens: let long button labels wrap instead of forcing
+   nowrap width beyond the viewport (prevents horizontal scroll). */
+@media (max-width: 560px) {
+  .btn { white-space: normal; text-align: center; }
+}
+
+/* ---------- Header / nav (shared with rest of site) ---------- */
+.site-top { position: sticky; top: 0; z-index: 100; width: 100%; }
+.topbar { background: var(--navy-deep); color: #C9D6E0; font-size: 0.85rem; }
+.topbar__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 0; }
+.topbar__tagline { font-family: var(--font-mono); letter-spacing: 0.03em; color: #9FD9D2; }
+.topbar__tagline:hover { color: var(--white); }
+.topbar__contacts { display: flex; gap: 24px; }
+.topbar__item { display: inline-flex; align-items: center; gap: 6px; opacity: 0.9; }
+.topbar__item:hover { opacity: 1; color: var(--white); }
+@media (max-width: 720px) { .topbar__contacts { display: none; } }
+
+.header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; overflow: visible; }
+.brand { display: flex; align-items: center; gap: 12px; height: 100%; position: relative; }
+.brand__logo { height: 128px; width: auto; object-fit: contain; mix-blend-mode: multiply; position: relative; z-index: 1; margin-block: -28px; }
+.nav__list { display: flex; gap: 18px; align-items: center; height: 100%; }
+.nav__item { display: flex; align-items: center; height: 100%; position: relative; }
+.nav__link { font-weight: 500; font-size: 0.95rem; color: var(--ink); position: relative; padding: 6px 0; display: inline-flex; align-items: center; }
+.nav__link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--teal); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+.nav__link:hover::after, .nav__link.is-active::after { transform: scaleX(1); }
+.nav__link.is-active { color: var(--navy); font-weight: 600; }
+.nav__link-row { display: flex; align-items: center; gap: 4px; height: 100%; }
+
+
+
+/* CSS Fix: Integrating hover states and the invisible bridge */
+.nav__item {
+  position: relative;
+}
+
+.nav__link-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__caret-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft, #475569);
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Activate caret animation on hover OR open */
+.nav__item:hover .nav__caret-btn,
+.nav__item.is-open .nav__caret-btn {
+  transform: rotate(180deg);
+  color: var(--teal, #0d9488);
+}
+
+.nav__dropdown {
+  position: absolute;
+  top: calc(100% + 12px); /* Leaves a gap below the navbar */
+  left: 0;
+  min-width: 240px;
+  background: var(--white, #ffffff);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+}
+
+/* Invisible bridge so the mouse doesn't leave the hover area when moving to the dropdown */
+.nav__dropdown::before {
+  content: '';
+  position: absolute;
+  top: -15px; /* Must cover the gap defined by `top: calc(100% + 12px)` */
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: transparent;
+}
+
+/* Show dropdown on hover OR when is-open class is active */
+.nav__item:hover .nav__dropdown,
+.nav__item.is-open .nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav__dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav__dropdown-link {
+  display: block;
+  padding: 10px 14px;
+  color: var(--navy, #0f172a);
+  font-size: 0.94rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.nav__dropdown-link:hover {
+  background: var(--teal-tint, #f0fdfa);
+  color: var(--teal-dark, #0d9488);
+}
+
+
+
+.nav__caret { display: inline-block; transition: transform 0.2s ease; font-size: 0.7rem; }
+.nav__item--has-dropdown:hover .nav__caret,
+.nav__item--has-dropdown:focus-within .nav__caret,
+.nav__item--has-dropdown.is-open .nav__caret { transform: rotate(180deg); }
+.nav__dropdown { position: absolute; top: calc(100% + 14px); left: 0; min-width: 260px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 20px 40px -20px rgba(18,41,75,0.35); padding: 10px; display: none; z-index: 90; }
+.nav__item--has-dropdown:hover .nav__dropdown,
+.nav__item--has-dropdown:focus-within .nav__dropdown,
+.nav__item--has-dropdown.is-open .nav__dropdown { display: block; }
+.nav__dropdown li + li { margin-top: 2px; }
+.nav__dropdown a { display: block; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--ink); transition: background 0.2s ease, color 0.2s ease; }
+.nav__dropdown a:hover, .nav__dropdown a.is-active { background: var(--teal-tint); color: var(--teal-dark); }
+.header__actions { display: flex; align-items: center; gap: 22px; }
+.header__phone { display: flex; flex-direction: column; line-height: 1.2; text-align: right; }
+.header__phone-label { font-size: 0.72rem; color: var(--ink-soft); }
+.header__phone-number { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+.nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px; }
+.nav__toggle span { width: 24px; height: 2px; background: var(--navy); display: block; transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Contact button: lives in the header on desktop; moves inside the
+   mobile nav menu (instead of crowding the bar next to the hamburger)
+   once the layout collapses. */
+.nav__item--mobile-contact { display: none; }
+
+@media (max-width: 900px) {
+  .header__phone { display: none; }
+  #headerContactBtn { display: none; }
+  .nav__toggle { display: flex; }
+  .nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--line); max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .nav.is-open { max-height: 80vh; overflow-y: auto; }
+  .nav__list { flex-direction: column; gap: 0; align-items: stretch; height: auto; padding: 10px var(--gutter) 20px; }
+  .nav__item { flex-direction: column; align-items: stretch; height: auto; }
+  .nav__link-row { justify-content: space-between; border-bottom: 1px solid var(--line); }
+  .nav__link { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nav__link-row .nav__link { border-bottom: none; }
+  .nav__dropdown { position: static; box-shadow: none; border: none; padding: 0 0 8px 14px; min-width: 0; }
+  .brand__logo { height: 88px; margin-block: -14px; }
+  .header__inner { height: 60px; }
+
+  .nav__item--mobile-contact { display: block; height: auto; margin-top: 16px; }
+  .nav__item--mobile-contact .btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .header__actions { gap: 10px; }
+  .brand__logo { height: 68px; margin-block: -10px; }
+}
+
+.section { padding: var(--section-pad) 0; }
+.section--tint { background: var(--paper-alt); }
+
+/* ---------- Hero (image background, homepage-hero-style overlay) ---------- */
+.page-banner { position: relative; color: var(--white); overflow: hidden; min-height: min(48vh, 400px); display: flex; align-items: flex-end; }
+.page-banner__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.page-banner__overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,30,54,0.55) 0%, rgba(11,30,54,0.6) 45%, rgba(11,30,54,0.92) 100%); z-index: 1; }
+.page-banner__inner { position: relative; z-index: 2; padding: clamp(48px, 9vw, 88px) 0 clamp(40px, 7vw, 64px); width: 100%; }
+.page-banner__title { font-size: clamp(2.1rem, 4.8vw, 3.2rem); font-weight: 600; color: var(--teal); max-width: 20ch; }
+.page-banner__lede { margin-top: 16px; font-size: 1.05rem; max-width: 58ch; color: #DCE6EC; }
+@media (max-width: 640px) { .page-banner { min-height: 52vh; } }
+
+/* ---------- Featured resource cards ---------- */
+.resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.resource-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 30px 28px; display: flex; flex-direction: column; gap: 16px; transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; }
+.resource-card:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 16px 30px -20px rgba(18,41,75,0.35); }
+.resource-card__icon { width: 54px; height: 54px; border-radius: 12px; background: var(--teal-tint); color: var(--teal-dark); display: flex; align-items: center; justify-content: center; }
+.resource-card__icon svg { width: 26px; height: 26px; }
+.resource-card__tag { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-dark); }
+.resource-card__title { font-size: 1.25rem; font-weight: 600; }
+.resource-card__text { color: var(--ink-soft); font-size: 0.96rem; flex: 1; }
+.resource-card__btn { align-self: flex-start; margin-top: 4px; }
+@media (max-width: 760px) { .resource-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .resource-card { padding: 24px 22px; } .resource-card__btn { width: 100%; } }
+
+/* ---------- Blog ---------- */
+.blog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: clamp(24px, 4vw, 36px); }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.blog-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; }
+.blog-card:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 16px 30px -20px rgba(18,41,75,0.35); }
+.blog-card__media { aspect-ratio: 16/10; background: var(--teal-tint); overflow: hidden; }
+.blog-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.blog-card__body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.blog-card__category { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-dark); }
+.blog-card__title { font-size: 1.08rem; font-weight: 600; line-height: 1.3; }
+.blog-card__excerpt { color: var(--ink-soft); font-size: 0.92rem; flex: 1; }
+.blog-card__meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
+.blog-card__date { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-soft); }
+.blog-card__link { font-size: 0.86rem; font-weight: 600; color: var(--teal-dark); display: inline-flex; align-items: center; gap: 4px; transition: gap 0.2s ease; }
+.blog-card__link:hover { gap: 8px; }
+@media (max-width: 960px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .blog-grid { grid-template-columns: 1fr; } }
+
+/* Skeleton loading cards */
+.skeleton-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
+.skeleton-card__media { aspect-ratio: 16/10; background: linear-gradient(100deg, #EDEBE3 30%, #F7F5EF 50%, #EDEBE3 70%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease-in-out infinite; }
+.skeleton-card__body { padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+.skeleton-line { height: 12px; border-radius: 4px; background: linear-gradient(100deg, #EDEBE3 30%, #F7F5EF 50%, #EDEBE3 70%); background-size: 200% 100%; animation: skeleton-shimmer 1.4s ease-in-out infinite; }
+.skeleton-line--sm { width: 40%; }
+.skeleton-line--lg { width: 90%; }
+.skeleton-line--md { width: 70%; }
+@keyframes skeleton-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* Blog empty / error state */
+.blog-state { grid-column: 1 / -1; text-align: center; padding: clamp(40px, 6vw, 64px) 20px; border: 1.5px dashed var(--line); border-radius: var(--radius-md); }
+.blog-state__icon { width: 52px; height: 52px; margin: 0 auto 18px; border-radius: 50%; background: var(--teal-tint); color: var(--teal-dark); display: flex; align-items: center; justify-content: center; }
+.blog-state--error .blog-state__icon { background: var(--error-tint); color: var(--error); }
+.blog-state__icon svg { width: 24px; height: 24px; }
+.blog-state__title { font-size: 1.15rem; font-weight: 600; color: var(--navy); }
+.blog-state__text { margin-top: 8px; color: var(--ink-soft); font-size: 0.95rem; max-width: 46ch; margin-left: auto; margin-right: auto; }
+.blog-state__retry { margin-top: 18px; }
+
+/* ---------- Modal ---------- */
+.modal-overlay { position: fixed; inset: 0; background: rgba(11,30,54,0.6); backdrop-filter: blur(2px); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.25s ease; }
+.modal-overlay.is-open { opacity: 1; pointer-events: auto; }
+.modal { background: var(--white); border-radius: var(--radius-md); max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 34px 32px 30px; position: relative; transform: translateY(14px) scale(0.98); opacity: 0; transition: transform 0.25s ease, opacity 0.25s ease; }
+.modal-overlay.is-open .modal { transform: translateY(0) scale(1); opacity: 1; }
+.modal__close { position: absolute; top: 16px; right: 16px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--white); color: var(--ink-soft); font-size: 1.2rem; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s ease, color 0.2s ease; }
+.modal__close:hover { background: var(--teal-tint); color: var(--teal-dark); }
+.modal__eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
+.modal__title { font-size: 1.4rem; font-weight: 600; padding-right: 20px; }
+.modal__sub { margin-top: 10px; color: var(--ink-soft); font-size: 0.94rem; }
+
+.form-field { margin-top: 18px; display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 0.86rem; font-weight: 600; color: var(--navy); }
+.form-field input { padding: 11px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line); font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--white); transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.form-field input:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(47,167,158,0.15); outline: none; }
+.form-field input[aria-invalid="true"] { border-color: var(--error); }
+.form-field__error { font-size: 0.8rem; color: var(--error); display: none; }
+.form-field.has-error .form-field__error { display: block; }
+
+.form-fieldset { margin-top: 20px; border: none; padding: 0; }
+.form-fieldset legend { font-size: 0.86rem; font-weight: 600; color: var(--navy); padding: 0; margin-bottom: 10px; }
+.radio-option { display: flex; align-items: center; gap: 10px; padding: 9px 0; font-size: 0.92rem; color: var(--ink); cursor: pointer; }
+.radio-option input { width: 17px; height: 17px; accent-color: var(--teal); flex-shrink: 0; }
+
+/* Consent checkbox */
+.consent-field { margin-top: 20px; }
+.consent-option { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; color: var(--ink-soft); line-height: 1.5; cursor: pointer; }
+.consent-option input { width: 17px; height: 17px; margin-top: 2px; accent-color: var(--teal); flex-shrink: 0; }
+.consent-option a { color: var(--teal-dark); text-decoration: underline; }
+.consent-field.has-error .form-field__error { display: block; margin-top: 6px; }
+
+.modal__actions { display: flex; gap: 12px; margin-top: 26px; }
+.modal__actions .btn { flex: 1; }
+
+.modal__loading, .modal__success { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 30px 6px 10px; }
+.spinner { width: 40px; height: 40px; border-radius: 50%; border: 3px solid var(--teal-tint); border-top-color: var(--teal); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.modal__success-icon { width: 54px; height: 54px; border-radius: 50%; background: var(--teal-tint); color: var(--teal-dark); display: flex; align-items: center; justify-content: center; }
+.modal__success-icon svg { width: 28px; height: 28px; }
+.modal__form-error { display: none; margin-top: 16px; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--error-tint); color: var(--error); font-size: 0.88rem; }
+.modal__form-error.is-visible { display: block; }
+
+@media (max-width: 480px) {
+  .modal { padding: 26px 20px 24px; }
+  .modal__actions { flex-direction: column; }
+}
+
+/* ---------- CTA ---------- */
+.cta { background: var(--navy); padding: clamp(48px, 8vw, 84px) 0; }
+.cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; }
+.cta__title { font-size: clamp(2rem, 4.6vw, 3rem); color: var(--white); font-weight: 600; max-width: 20ch; }
+.cta__title-mark { color: var(--teal); }
+.cta__text { margin-top: 14px; color: #DCE6EC; max-width: 48ch; }
+@media (max-width: 560px) { .cta .btn { width: 100%; } }
+
+/* ---------- Footer ---------- */
+
+
+.footer {
+  background: var(--navy-deep, #090d16);
+  color: #B9C7D3;
+  padding-top: 64px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1.3fr 1.1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background: var(--paper, #ffffff);
+  border-radius: var(--radius-sm, 6px);
+  padding: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.footer__blurb {
+  font-size: 0.92rem;
+  max-width: 30ch;
+  color: #9AABBA;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Social Media Icons Styling */
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B9C7D3;
+  transition: all 0.25s ease;
+}
+
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__social-link:hover {
+  background: var(--teal, #0d9488);
+  border-color: var(--teal, #0d9488);
+  color: var(--white, #ffffff);
+  transform: translateY(-2px);
+}
+
+.footer__heading {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white, #ffffff);
+  margin-bottom: 18px;
+}
+
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__nav a {
+  color: #B9C7D3;
+  transition: color 0.2s ease;
+}
+
+.footer__nav a:hover {
+  color: var(--white, #ffffff);
+}
+
+.footer__contact p {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.92rem;
+}
+
+.footer__label {
+  font-size: 0.72rem;
+  color: #7C8DA0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer__contact a {
+  color: #B9C7D3;
+  transition: color 0.2s ease;
+}
+
+.footer__contact a:hover {
+  color: var(--teal, #0d9488);
+}
+
+.footer__bottom {
+  padding: 22px 0;
+  font-size: 0.82rem;
+  color: #7C8DA0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.footer__credit {
+  color: #7C8DA0;
+}
+
+@media (max-width: 960px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.whatsapp-btn { position: fixed; bottom: 24px; right: 24px; width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: var(--white); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 24px -8px rgba(0,0,0,0.4); z-index: 60; transition: transform 0.2s ease; }
+.whatsapp-btn:hover { transform: scale(1.08); }
+.whatsapp-btn__icon { width: 30px; height: 30px; }
+@media (max-width: 480px) {
+  .whatsapp-btn { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .whatsapp-btn__icon { width: 26px; height: 26px; }
+}
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal--visible { opacity: 1; transform: translateY(0); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na3.hs-scripts.com/343513690.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+
+</head>
+
+<body>
+
+<div class="site-top">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#top" class="topbar__tagline">Clean Books. On-Time Taxes. Zero Hassle</a>
+      <div class="topbar__contacts">
+        <a href="mailto:info@ukahbookkeepingservices.ca" class="topbar__item">
+          <span aria-hidden="true">&#9993;</span> info@ukahbookkeepingservices.ca
+        </a>
+        <a href="tel:+12269799080" class="topbar__item">
+          <span aria-hidden="true">&#9742;</span> +1 (226) 979-9080
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="brand__logo">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+
+          <li class="nav__item nav__item--has-dropdown" id="servicesNavItem">
+            <div class="nav__link-row">
+              <a href="" class="nav__link">Services</a>
+              <button type="button" class="nav__caret-btn" data-dropdown-caret aria-expanded="false" aria-controls="servicesDropdown" aria-label="Toggle services submenu">
+                <span class="nav__caret" aria-hidden="true">&#9662;</span>
+              </button>
+            </div>
+            <ul class="nav__dropdown" id="servicesDropdown">
+              <li><a href="servic1.html">Core Bookkeeping</a></li>
+              <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+              <li><a href="service3.html">HST / GST Compliance</a></li>
+              <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="product.html" class="nav__link">Product</a> </li>
+          <li class="nav__item"><a href="nigeria.html" class="nav__link">Nigeria</a></li>
+          <li class="nav__item"><a href="resources.html" class="nav__link is-active">Resources</a></li>
+          <li class="nav__item"><a href="team.html" class="nav__link">Our Team</a></li>
+           <li class="nav__item"><a href="career.html" class="nav__link">Careers</a></li>
+           <li class="nav__item"><a href="refer.html" class="nav__link">Refrral</a></li>
+          <li class="nav__item"><a href="FAQ.html" class="nav__link">FAQ</a></li>
+
+          <!-- Contact lives here for mobile only — see .nav__item--mobile-contact CSS -->
+          <li class="nav__item nav__item--mobile-contact">
+            <a href="contact.html" class="btn btn--primary">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+       
+        <a href="contact.html" class="btn btn--primary" id="headerContactBtn">Contact</a>
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<section class="page-banner" aria-label="Resources">
+  <img class="page-banner__img" src="abt2.jpg" alt="" role="presentation">
+  <div class="page-banner__overlay"></div>
+  <div class="container page-banner__inner">
+    <h1 class="page-banner__title">Resources</h1>
+    <p class="page-banner__lede">Access practical bookkeeping templates, frameworks, and expert articles designed to help businesses stay financially organized and make informed financial decisions.</p>
+  </div>
+</section>
+
+<section class="section" id="featured-resources">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Free Resources</p>
+      <h2 class="section__title">Featured Downloads</h2>
+      <p class="section__lede">Ready-to-use tools you can put to work in your business today.</p>
+    </div>
+
+    <div class="resource-grid">
+      <article class="resource-card">
+        <span class="resource-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </span>
+        <span class="resource-card__tag">Checklist</span>
+        <h3 class="resource-card__title">Ontario HST Survival Checklist</h3>
+        <button
+          type="button"
+          class="btn btn--primary resource-card__btn js-open-download-modal"
+          data-resource-id="bookkeeping-checklist"
+          data-resource-title="Ontario HST Survival Checklist"
+          data-resource-cta="Download Checklist"
+        >
+          Download Checklist
+        </button>
+      </article>
+
+      <article class="resource-card">
+        <span class="resource-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
+        </span>
+        <span class="resource-card__tag">Framework</span>
+        <h3 class="resource-card__title">Ontario Payroll Compliance Framework</h3>
+        <button
+          type="button"
+          class="btn btn--primary resource-card__btn js-open-download-modal"
+          data-resource-id="bookkeeping-framework"
+          data-resource-title="Bookkeeping Framework"
+          data-resource-cta="Download Framework"
+        >
+          Download Framework
+        </button>
+      </article>
+
+      <article class="resource-card">
+        <span class="resource-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
+        </span>
+        <span class="resource-card__tag">BOX LEDGER</span>
+        <h3 class="resource-card__title">The Death of the Shoebox Ledger</h3>
+        <button
+          type="button"
+          class="btn btn--primary resource-card__btn js-open-download-modal"
+          data-resource-id="SHOE BOX LEDGER"
+          data-resource-title="SHOE BOX LEDGER"
+          data-resource-cta="Download ledger"
+        >
+          Download ledger
+        </button>
+      </article>
+
+      <article class="resource-card">
+        <span class="resource-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
+        </span>
+        <span class="resource-card__tag"> Sync Trap</span>
+        <h3 class="resource-card__title">The QuickBooks Sync Trap</h3>
+        <button
+          type="button"
+          class="btn btn--primary resource-card__btn js-open-download-modal"
+          data-resource-id=" Sync Trap"
+          data-resource-title=" Sync Trap"
+          data-resource-cta="Download  Sync Trap"
+        >
+          Download  Sync Trap
+        </button>
+      </article>
+
+      <article class="resource-card">
+        <span class="resource-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg>
+        </span>
+        <span class="resource-card__tag">Compliance Checklist</span>
+        <h3 class="resource-card__title">LSO Trust Accounting Compliance Checklist</h3>
+        <button
+          type="button"
+          class="btn btn--primary resource-card__btn js-open-download-modal"
+          data-resource-id="Compliance Checklist"
+          data-resource-title="Compliance Checklist"
+          data-resource-cta="Download Compliance Checklist"
+        >
+          Download Compliance Checklist
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="blog">
+  <div class="container">
+    <div class="blog-toolbar">
+      <div class="section__head" style="margin-bottom:0;">
+        <p class="eyebrow">Latest Articles</p>
+        <h2 class="section__title">Blog</h2>
+        <p class="section__lede">Practical articles on bookkeeping, tax compliance, and small business finance.</p>
+      </div>
+    </div>
+
+
+    <div id="blogPostsContainer" class="blog-grid" aria-live="polite" aria-busy="true">
+      <!-- Loading skeletons are injected on page load, then replaced by posts / empty state / error state -->
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta__inner">
+    <div>
+      <h2 class="cta__title">Want this <span class="cta__title-mark">done for you</span>?</h2>
+      <p class="cta__text">Book a free 30-minute consultation and let's talk about where your bookkeeping stands today.</p>
+    </div>
+    <a href="https://calendly.com/chidinma-ukah/30min" class="btn btn--primary">Book a Free 30-Minute Consultation</a>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="ukah logo.png" alt="Ukah Bookkeeping Services logo" class="footer__logo">
+      <p class="footer__blurb">Accurate bookkeeping, practical reporting, and dependable financial systems for small businesses.</p>
+      
+      <!-- Social Media Icons -->
+      <div class="footer__socials" aria-label="Social Media">
+        <a href="https://www.instagram.com/ukahbookkeepingservices?igsh=ZmZ6cDl1ZmZma2xi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/ukah-bookkeeping-services/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <nav class="footer__nav" aria-label="Footer">
+      <h3 class="footer__heading">Main Pages</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="product.html">Product</a></li>
+         <li><a href="nigeria.html">Nigeria</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="team.html">Our Team</a></li>
+         <li><a href="career.html">Careers</a></li>
+          <li><a href="refer.html">Referral</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__nav" aria-label="Services">
+      <h3 class="footer__heading">Our Services</h3>
+      <ul>
+        <li><a href="servic1.html">Core Bookkeeping</a></li>
+        <li><a href="service2.html">T1 Personal &amp; Business Tax Filing</a></li>
+        <li><a href="service3.html">HST / GST Compliance</a></li>
+        <li><a href="service4.html">QuickBooks Setup &amp; Optimization</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__contact">
+      <h3 class="footer__heading">Contact</h3>
+      <p><span class="footer__label">Email</span><a href="mailto:info@ukahbookkeepingservices.ca">info@ukahbookkeepingservices.ca</a></p>
+      <p><span class="footer__label">Phone</span><a href="tel:+12269799080">+1 (226) 979-9080</a></p>
+      <p><span class="footer__label">Address</span><span>Kitchener, Ontario, Canada</span></p>
+      <p><span class="footer__label">Hours</span><span>Mon&ndash;Thu, 8:00 AM&ndash;6:00 PM EST, Fri 8:00 AM&ndash;6:30 PM EST, Sat 9:00 AM&ndash;5:00 PM EST</span></p>
+    </div>
+  </div>
+  
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year"></span> Ukah Bookkeeping Services. All Rights Reserved.</p>
+    <p class="footer__credit">Built By SOGROVA</p>
+  </div>
+</footer>
+
+<a id="whatsappButton" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-btn__icon">
+    <path fill="currentColor" d="M16.02 3C9.4 3 4 8.38 4 15c0 2.36.68 4.55 1.86 6.4L4 29l7.78-1.82A11.9 11.9 0 0 0 16.02 27C22.65 27 28 21.62 28 15S22.65 3 16.02 3Zm0 21.7c-1.98 0-3.85-.55-5.44-1.5l-.39-.23-4.62 1.08 1.1-4.5-.25-.4A9.62 9.62 0 0 1 6.3 15c0-5.35 4.36-9.7 9.72-9.7 5.35 0 9.7 4.35 9.7 9.7 0 5.36-4.35 9.7-9.7 9.7Zm5.32-7.26c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.14-.2.3-.75.95-.92 1.14-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.57-.48-.5-.66-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.27.3-1.02 1-1.02 2.43 0 1.43 1.05 2.82 1.2 3.01.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.85.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34Z"/>
+  </svg>
+</a>
+
+<!-- ============================================================
+     LEAD-GEN DOWNLOAD MODAL
+     Reused for both resource cards. The clicked button's
+     data-resource-id / data-resource-title attributes control
+     which resource gets downloaded after a successful submission.
+     ============================================================ -->
+<div class="modal-overlay" id="leadModalOverlay">
+  <div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle" aria-describedby="leadModalSub">
+    <button type="button" class="modal__close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+
+    <!-- Form state -->
+    <div id="modalFormState">
+      <p class="modal__eyebrow">Free Download</p>
+      <h2 class="modal__title" id="leadModalTitle">Get your <span id="modalResourceName">resource</span></h2>
+      <p class="modal__sub" id="leadModalSub">Tell us a little about your business and we'll send this straight to your inbox.</p>
+
+      <form id="leadForm" novalidate>
+        <div class="form-field" id="fieldFullName">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+          <span class="form-field__error">Please enter your full name.</span>
+        </div>
+
+        <div class="form-field" id="fieldEmail">
+          <label for="businessEmail">Business Email</label>
+          <input type="email" id="businessEmail" name="businessEmail" autocomplete="email" required>
+          <span class="form-field__error">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-field" id="fieldPhone">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="tel" required>
+          <span class="form-field__error">Please enter a valid phone number.</span>
+        </div>
+
+        <fieldset class="form-fieldset" id="fieldAccountingSystem">
+          <legend>What is your company&rsquo;s current accounting system?</legend>
+
+          <label class="radio-option">
+            <input type="radio" name="accountingSystem" value="QuickBooks Online (QBO)" required>
+            QuickBooks Online (QBO)
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="accountingSystem" value="Xero / Sage">
+            Xero / Sage
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="accountingSystem" value="Manual Excel Spreadsheets">
+            Manual Excel Spreadsheets
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="accountingSystem" value="None / We need a complete setup">
+            None / We need a complete setup
+          </label>
+          <span class="form-field__error" id="accountingSystemError">Please select an option.</span>
+        </fieldset>
+
+        <!-- Consent to be contacted (CASL: express opt-in, unchecked by default) -->
+        <div class="consent-field" id="fieldConsent">
+          <label class="consent-option">
+            <input type="checkbox" id="contactConsent" name="contactConsent" required>
+            <span>I agree to be contacted by Ukah Bookkeeping Services by email, phone or text about my request and related services. I can withdraw my consent at any time.</span>
+          </label>
+          <span class="form-field__error">Please confirm your consent so we can contact you.</span>
+        </div>
+
+        <div class="modal__form-error" id="modalFormError" role="alert"></div>
+
+        <div class="modal__actions">
+          <button type="button" class="btn btn--ghost" id="modalCancelBtn">Cancel</button>
+          <button type="submit" class="btn btn--primary" id="modalSubmitBtn">Submit &amp; Download</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Loading state -->
+    <div class="modal__loading" id="modalLoadingState" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Sending your request&hellip;</p>
+    </div>
+
+    <!-- Success state -->
+    <div class="modal__success" id="modalSuccessState" hidden>
+      <span class="modal__success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </span>
+      <h2 class="modal__title">You&rsquo;re all set!</h2>
+      <p class="modal__sub">Your download should begin automatically.</p>
+      <button type="button" class="btn btn--primary" id="modalDoneBtn">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.SITE_CONFIG = {
+    whatsapp: {
+      number: "12269799080",
+      message: "Hello, I visited your website and I would like to make an enquiry."
+    }
+  };
+</script>
+
+<script>
+/* ==========================================================================
+   UKAH BOOKKEEPING — RESOURCES PAGE
+   Shared site behavior (nav, footer, WhatsApp) + the Download Lead-Gen Modal
+   + the Supabase-ready dynamic Blog module.
+   ========================================================================== */
+(function () {
+  "use strict";
+
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var waBtn = document.getElementById("whatsappButton");
+  if (waBtn && window.SITE_CONFIG) {
+    var cfg = window.SITE_CONFIG.whatsapp;
+    var url = "https://wa.me/" + cfg.number + "?text=" + encodeURIComponent(cfg.message);
+    waBtn.setAttribute("href", url);
+  }
+
+  var navToggle = document.getElementById("navToggle");
+  var siteNav = document.getElementById("site-nav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = siteNav.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    siteNav.querySelectorAll(".nav__dropdown a, .nav__list > .nav__item > .nav__link-row > .nav__link, .nav__list > .nav__item > .nav__link").forEach(function (link) {
+      link.addEventListener("click", function () {
+        siteNav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+/* JavaScript Fix: Handling both click and hover states */
+document.addEventListener("DOMContentLoaded", function () {
+  var servicesItem = document.getElementById("servicesNavItem");
+  var servicesCaret = document.getElementById("servicesCaret");
+  var servicesDropdown = document.getElementById("servicesDropdown");
+
+  if (servicesItem && servicesCaret && servicesDropdown) {
+    
+    // Helper function to open menu
+    function openMenu() {
+      servicesItem.classList.add("is-open");
+      servicesCaret.setAttribute("aria-expanded", "true");
+    }
+
+    // Helper function to close menu
+    function closeMenu() {
+      servicesItem.classList.remove("is-open");
+      servicesCaret.setAttribute("aria-expanded", "false");
+    }
+
+    // 1. Click support (for mobile and deliberate clicks)
+    servicesCaret.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (servicesItem.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // 2. Hover support (for desktop)
+    servicesItem.addEventListener("mouseenter", openMenu);
+    servicesItem.addEventListener("mouseleave", closeMenu);
+
+    // 3. Stop clicks inside the dropdown from closing it
+    servicesDropdown.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+
+    // 4. Close dropdown when clicking elsewhere on the page
+    document.addEventListener("click", function (e) {
+      if (servicesItem.classList.contains("is-open") && !servicesItem.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  }
+});
+
+  var revealTargets = document.querySelectorAll(".resource-card");
+  if ("IntersectionObserver" in window && revealTargets.length) {
+    revealTargets.forEach(function (el) { el.classList.add("reveal"); });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal--visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealTargets.forEach(function (el) { observer.observe(el); });
+  }
+})();
+</script>
+
+<script>
+
+var RESOURCE_LIBRARY = {
+  "bookkeeping-checklist": {
+    title: "Small Business Bookkeeping Checklist",
+    file: "Ontario HST Survival Checklist.pdf"
+  },
+  "bookkeeping-framework": {
+    title: "Bookkeeping Framework",
+    file: "Ontario Payroll Compliance Framework.pdf"
+  },
+   "SHOE BOX LEDGER": {
+    title: "SHOE BOX LEDGER",
+    file: "UKAH SHOE BOX LEDGER.pdf"
+  },
+   " Sync Trap": {
+    title: " Sync Trap",
+    file: "The QuickBooks Sync Trap.pdf"
+  },
+   "Compliance Checklist": {
+    title: "Compliance Checklist",
+    file: "LSO Trust Accounting Compliance Checklist.pdf"
+  }
+
+};
+
+(function () {
+  "use strict";
+
+  var overlay = document.getElementById("leadModalOverlay");
+  var modal = document.getElementById("leadModal");
+  var closeBtn = document.getElementById("modalCloseBtn");
+  var cancelBtn = document.getElementById("modalCancelBtn");
+  var doneBtn = document.getElementById("modalDoneBtn");
+  var form = document.getElementById("leadForm");
+  var formState = document.getElementById("modalFormState");
+  var loadingState = document.getElementById("modalLoadingState");
+  var successState = document.getElementById("modalSuccessState");
+  var formErrorBox = document.getElementById("modalFormError");
+  var resourceNameEl = document.getElementById("modalResourceName");
+  var submitBtn = document.getElementById("modalSubmitBtn");
+
+  var activeResourceId = null;
+  var lastFocusedElement = null;
+
+  /** Opens the modal for a given resource id, resetting it to the form state. */
+  function openModal(resourceId, resourceTitle) {
+    activeResourceId = resourceId;
+    resourceNameEl.textContent = resourceTitle || "resource";
+    resetModal();
+    lastFocusedElement = document.activeElement;
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    var firstField = document.getElementById("fullName");
+    if (firstField) firstField.focus();
+    document.addEventListener("keydown", onKeydown);
+  }
+
+  function closeModal() {
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
+    document.removeEventListener("keydown", onKeydown);
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
+  }
+
+  function onKeydown(e) {
+    if (e.key === "Escape") closeModal();
+  }
+
+  function resetModal() {
+    form.reset();
+    clearFieldErrors();
+    formErrorBox.classList.remove("is-visible");
+    formErrorBox.textContent = "";
+    formState.hidden = false;
+    loadingState.hidden = true;
+    successState.hidden = true;
+    submitBtn.disabled = false;
+  }
+
+  function clearFieldErrors() {
+    document.querySelectorAll(".form-field, .form-fieldset, .consent-field").forEach(function (field) {
+      field.classList.remove("has-error");
+    });
+    document.querySelectorAll('input[aria-invalid]').forEach(function (input) {
+      input.removeAttribute("aria-invalid");
+    });
+  }
+
+  /** Basic, accessible client-side validation. Returns true if the form is valid. */
+  function validateForm() {
+    clearFieldErrors();
+    var isValid = true;
+
+    var fullName = document.getElementById("fullName");
+    if (!fullName.value.trim()) {
+      markInvalid("fieldFullName", fullName);
+      isValid = false;
+    }
+
+    var email = document.getElementById("businessEmail");
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+      markInvalid("fieldEmail", email);
+      isValid = false;
+    }
+
+    var phone = document.getElementById("phoneNumber");
+    var phonePattern = /^[0-9+()\-.\s]{7,20}$/;
+    if (!phonePattern.test(phone.value.trim())) {
+      markInvalid("fieldPhone", phone);
+      isValid = false;
+    }
+
+    var accountingChecked = form.querySelector('input[name="accountingSystem"]:checked');
+    if (!accountingChecked) {
+      document.getElementById("fieldAccountingSystem").classList.add("has-error");
+      isValid = false;
+    }
+
+    var consent = document.getElementById("contactConsent");
+    if (!consent.checked) {
+      document.getElementById("fieldConsent").classList.add("has-error");
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  function markInvalid(fieldId, inputEl) {
+    document.getElementById(fieldId).classList.add("has-error");
+    inputEl.setAttribute("aria-invalid", "true");
+  }
+
+  /**
+   * ------------------------------------------------------------------------
+   * FORMSPREE ENDPOINT — PASTE YOUR ENDPOINT HERE
+   * ------------------------------------------------------------------------
+   * Replace the string below with your real Formspree form endpoint
+   * (from https://formspree.io — looks like "https://formspree.io/f/xxxxabcd").
+   * This is the ONLY line that needs to change to connect the form.
+   * Submissions will be delivered to the email address you set up in your
+   * Formspree form's settings.
+   * ------------------------------------------------------------------------
+   */
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/xrpzznqn"; // <-- PASTE YOUR FORMSPREE ENDPOINT HERE
+
+  /**
+   * ------------------------------------------------------------------------
+   * submitLeadForm(formData)
+   * ------------------------------------------------------------------------
+   * Sends the completed lead form to Formspree using their AJAX/fetch API
+   * (https://help.formspree.io/hc/en-us/articles/360013580813). Formspree
+   * forwards each submission to the client's configured email address —
+   * no backend of our own is required.
+   *
+   * `formData` shape:
+   *   {
+   *     fullName: string,
+   *     businessEmail: string,
+   *     phoneNumber: string,
+   *     accountingSystem: string,
+   *     contactConsent: "Yes" | "No",
+   *     consentText: string,
+   *     resourceId: string,
+   *     resourceTitle: string,
+   *     submittedAt: ISO date string
+   *   }
+   *
+   * Returns a Promise that resolves on a successful Formspree submission
+   * and rejects (with the response body, when available) on failure.
+   * ------------------------------------------------------------------------
+   */
+  function submitLeadForm(formData) {
+    return fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(formData)
+    }).then(function (response) {
+      if (!response.ok) {
+        return response.json().catch(function () { return {}; }).then(function (body) {
+          throw new Error((body && body.error) || "Formspree submission failed");
+        });
+      }
+      return response.json().catch(function () { return {}; });
+    });
+  }
+
+  /**
+   * ------------------------------------------------------------------------
+   * downloadResource(resourceId)
+   * ------------------------------------------------------------------------
+   * PLACEHOLDER — triggers the actual file download once the lead has been
+   * captured successfully. Update RESOURCE_LIBRARY[resourceId].file to point
+   * at the real asset (local file, Supabase Storage public URL, S3 link...).
+   * ------------------------------------------------------------------------
+   */
+  function downloadResource(resourceId) {
+    var resource = RESOURCE_LIBRARY[resourceId];
+    if (!resource) {
+      console.warn("[downloadResource] Unknown resourceId:", resourceId);
+      return;
+    }
+    var link = document.createElement("a");
+    link.href = resource.file;
+    link.setAttribute("download", "");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    var formData = {
+      fullName: document.getElementById("fullName").value.trim(),
+      businessEmail: document.getElementById("businessEmail").value.trim(),
+      phoneNumber: document.getElementById("phoneNumber").value.trim(),
+      accountingSystem: form.querySelector('input[name="accountingSystem"]:checked').value,
+      contactConsent: document.getElementById("contactConsent").checked ? "Yes" : "No",
+      consentText: "I agree to be contacted by Ukah Bookkeeping Services by email, phone or text about my request and related services.",
+      resourceId: activeResourceId,
+      resourceTitle: (RESOURCE_LIBRARY[activeResourceId] || {}).title || "",
+      submittedAt: new Date().toISOString()
+    };
+
+    // Show loading state
+    formState.hidden = true;
+    loadingState.hidden = false;
+    submitBtn.disabled = true;
+
+    submitLeadForm(formData)
+      .then(function () {
+        loadingState.hidden = true;
+        successState.hidden = false;
+        downloadResource(activeResourceId);
+      })
+      .catch(function (err) {
+        console.error("[submitLeadForm] Formspree submission failed:", err);
+        loadingState.hidden = true;
+        formState.hidden = false;
+        submitBtn.disabled = false;
+        formErrorBox.textContent = "Something went wrong sending your request. Please try again.";
+        formErrorBox.classList.add("is-visible");
+      });
+  }
+
+  document.querySelectorAll(".js-open-download-modal").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      openModal(btn.getAttribute("data-resource-id"), btn.getAttribute("data-resource-title"));
+    });
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  cancelBtn.addEventListener("click", closeModal);
+  doneBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  form.addEventListener("submit", handleSubmit);
+})();
+</script>
+
+<script>
+
+var blogContainer = document.getElementById("blogPostsContainer");
+
+const SUPABASE_URL = "https://ecmjucyvqhxvimuaovxk.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk";
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+/**
+ * fetchBlogPosts()
+ * Connected to Supabase `posts` table.
+ */
+function fetchBlogPosts() {
+  return supabaseClient
+    .from("posts")
+    .select("id, title, excerpt, category, image_url, published_at, slug")
+    .eq("is_published", true)
+    .order("published_at", { ascending: false })
+    .then(function (response) {
+      if (response.error) {
+        throw response.error;
+      }
+      return response.data;
+    });
+}
+
+/** Escapes text before it's inserted into innerHTML, to render post data safely. */
+function escapeHtml(value) {
+  var div = document.createElement("div");
+  div.textContent = value == null ? "" : String(value);
+  return div.innerHTML;
+}
+
+function formatPublishDate(isoDate) {
+  if (!isoDate) return "";
+  var date = new Date(isoDate);
+  if (isNaN(date.getTime())) return "";
+  return date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+
+/** Renders a fixed number of shimmering placeholder cards while posts load. */
+function renderBlogSkeletons(count) {
+  var html = "";
+  for (var i = 0; i < count; i++) {
+    html += (
+      '<div class="skeleton-card" aria-hidden="true">' +
+        '<div class="skeleton-card__media"></div>' +
+        '<div class="skeleton-card__body">' +
+          '<div class="skeleton-line skeleton-line--sm"></div>' +
+          '<div class="skeleton-line skeleton-line--lg"></div>' +
+          '<div class="skeleton-line skeleton-line--md"></div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+  blogContainer.innerHTML = html;
+  blogContainer.setAttribute("aria-busy", "true");
+}
+
+/** Renders the "no posts yet" state. */
+function renderBlogEmptyState() {
+  blogContainer.innerHTML =
+    '<div class="blog-state">' +
+      '<span class="blog-state__icon" aria-hidden="true">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>' +
+      '</span>' +
+      '<h3 class="blog-state__title">New articles are on the way</h3>' +
+      '<p class="blog-state__text">We&rsquo;re preparing practical bookkeeping and tax articles for small business owners. Check back soon.</p>' +
+    '</div>';
+  blogContainer.setAttribute("aria-busy", "false");
+}
+
+/** Renders the error state with a retry action. */
+function renderBlogErrorState() {
+  blogContainer.innerHTML =
+    '<div class="blog-state blog-state--error">' +
+      '<span class="blog-state__icon" aria-hidden="true">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>' +
+      '</span>' +
+      '<h3 class="blog-state__title">We couldn&rsquo;t load the blog right now</h3>' +
+      '<p class="blog-state__text">Something went wrong fetching articles. Please try again in a moment.</p>' +
+      '<button type="button" class="btn btn--primary blog-state__retry" id="blogRetryBtn">Try Again</button>' +
+    '</div>';
+  blogContainer.setAttribute("aria-busy", "false");
+  var retryBtn = document.getElementById("blogRetryBtn");
+  if (retryBtn) retryBtn.addEventListener("click", loadBlogPosts);
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * renderBlogPosts(posts)
+ * ------------------------------------------------------------------------
+ * Reusable renderer: turns an array of post objects into blog cards inside
+ * #blogPostsContainer. Called by loadBlogPosts() after a successful fetch,
+ * and reusable later by an admin panel's live preview if needed.
+ * ------------------------------------------------------------------------
+ */
+function renderBlogPosts(posts) {
+  if (!posts || posts.length === 0) {
+    renderBlogEmptyState();
+    return;
+  }
+
+  var html = posts.map(function (post) {
+    var image = post.image_url
+      ? '<img src="' + escapeHtml(post.image_url) + '" alt="" loading="lazy">'
+      : "";
+    var href = post.slug ? ("blog-post.html?slug=" + encodeURIComponent(post.slug)) : "#";
+
+    return (
+      '<article class="blog-card" data-post-id="' + escapeHtml(post.id) + '">' +
+        '<div class="blog-card__media">' + image + '</div>' +
+        '<div class="blog-card__body">' +
+          '<span class="blog-card__category">' + escapeHtml(post.category || "Bookkeeping") + '</span>' +
+          '<h3 class="blog-card__title">' + escapeHtml(post.title) + '</h3>' +
+          '<p class="blog-card__excerpt">' + escapeHtml(post.excerpt) + '</p>' +
+          '<div class="blog-card__meta">' +
+            '<span class="blog-card__date">' + escapeHtml(formatPublishDate(post.published_at)) + '</span>' +
+            '<a class="blog-card__link" href="' + href + '">Read More &rarr;</a>' +
+          '</div>' +
+        '</div>' +
+      '</article>'
+    );
+  }).join("");
+
+  blogContainer.innerHTML = html;
+  blogContainer.setAttribute("aria-busy", "false");
+}
+
+/** Orchestrates the loading -> success/empty/error sequence. */
+function loadBlogPosts() {
+  renderBlogSkeletons(3);
+  fetchBlogPosts()
+    .then(renderBlogPosts)
+    .catch(function (err) {
+      console.error("[fetchBlogPosts] failed:", err);
+      renderBlogErrorState();
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadBlogPosts);
+</script>
+</body>
+</html>

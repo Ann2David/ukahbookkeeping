@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Opportunity | UKAH</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;color:#1C2B3A;background:#F6F4EF}.container{max-width:900px;margin:auto;padding:50px 20px}.card{background:#fff;border:1px solid #DCD6C8;border-radius:14px;padding:clamp(24px,5vw,48px)}h1{color:#12294B;font-size:clamp(2rem,5vw,3.5rem)}h2{color:#12294B;margin-top:35px}.meta{display:flex;flex-wrap:wrap;gap:8px}.meta span{background:#E7F4F2;color:#23837C;padding:6px 10px;border-radius:999px;font-size:.8rem}.btn{display:inline-block;background:#2FA79E;color:#fff;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:700;margin-top:20px}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}.detail{background:#F6F4EF;padding:14px;border-radius:8px}.detail small{display:block;color:#55677A}.detail strong{color:#12294B}@media(max-width:650px){.detail-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="container"><article id="job" class="card">Loading role...</article></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="https://ecmjucyvqhxvimuaovxk.supabase.co";
+const SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVjbWp1Y3l2cWh4dmltdWFvdnhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzMzAzMzksImV4cCI6MjEwMDkwNjMzOX0.JQigXoRpbsw0UtebL6y_R9rNyA4wc0dv3bOad9y_ABk";
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const id=new URLSearchParams(location.search).get("id");
+
+async function loadJob(){
+ const el=document.getElementById("job");
+ if(!id){el.textContent="Job not found.";return}
+ const {data,error}=await supabaseClient.from("jobs").select("*").eq("id",id).eq("status","published").single();
+ if(error||!data){el.textContent="This vacancy is no longer available.";return}
+ document.title=data.title+" | UKAH Careers";
+ el.innerHTML=`
+ <h1>${esc(data.title)}</h1>
+ <div class="meta">
+  <span>${esc(data.location||"Location not specified")}</span>
+  <span>${esc(data.work_arrangement||"")}</span>
+  <span>${esc(data.employment_type||"")}</span>
+  ${data.experience_level?`<span>${esc(data.experience_level)}</span>`:""}
+ </div>
+ <div class="detail-grid">
+  <div class="detail"><small>Department</small><strong>${esc(data.department||"—")}</strong></div>
+  <div class="detail"><small>Application Deadline</small><strong>${esc(data.application_deadline||"—")}</strong></div>
+  <div class="detail"><small>Country</small><strong>${esc(data.country||"—")}</strong></div>
+  <div class="detail"><small>Compensation</small><strong>${esc(data.salary||"Not specified")}</strong></div>
+ </div>
+ <h2>About the Role</h2><p>${esc(data.description||"")}</p>
+ ${section("Key Responsibilities",data.responsibilities)}
+ ${section("Requirements",data.requirements)}
+ ${section("What We're Looking For",data.qualities)}
+ ${section("What We Offer",data.benefits)}
+ <a class="btn" href="apply.html?job=${encodeURIComponent(data.id)}">Apply for This Position</a>`;
+}
+function section(title,items){if(!Array.isArray(items)||!items.length)return "";return `<h2>${title}</h2><ul>${items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`}
+function esc(v){const d=document.createElement("div");d.textContent=v??"";return d.innerHTML}
+loadJob();
+</script>
+</body>
+</html>
